@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>График звонков по просрочке</title>
+
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="{% static 'website/css/admin_style.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+
+    <script src="{% static 'website/js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static 'website/js/jquery.dataTables.min.js' %}"></script>
+</head>
+
+<body id="page-top">
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        var csrftoken = getCookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+    });
+</script>
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    {% include "elements/sidebar.html" %}
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                             aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                           placeholder="Search for..." aria-label="Search"
+                                           aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <!-- Nav Item - User Information -->
+                    {% include "elements/userbar.html" %}
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+
+            {% block content %}
+
+                <div class="container-fluid">
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>График звонков по просрочке</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div id="alert_id" class="alert" role="alert" style="white-space: pre;!important;">{{ error }}</div>
+                    <div id="all_table" class="card shadow mb-4">
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-bold text-success">График звонков по просрочке</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" id="dataTableScheduleAll">
+                                    <thead>
+                                    <tr>
+                                        <th width="50%">День недели</th>
+                                        <th>Срок просрочки</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for index, row in df_for_all.iterrows %}
+                                        <tr>
+                                            <td data-order="{{ index }}">{{ row.weekday }}</td>
+                                            <td>
+                                                    {% for row in row.termdelays %}
+                                                        {{ row }},
+                                                    {% endfor %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DataTale Match -->
+                    <div id="users_table" class="card shadow mb-4">
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-bold text-success">Администрирование графика звонков</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="dropdown no-arrow button-form" style="float: right; top: -10px;">
+                                <a href="#" role="button" class="text-success"
+                                   aria-haspopup="true" aria-expanded="false" data-toggle="modal"
+                                   data-target="#addNote">
+                                    Добавить запись
+                                    <i class="fas fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                                </a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" id="dataTableSchedule">
+                                    <thead>
+                                    <tr>
+                                        <th width="50%">День недели</th>
+                                        <th>Срок просрочки</th>
+                                        <th width="7%">Активен</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_for_admin.iterrows %}
+                                        <tr>
+                                            <td data-order="{{ index }}">{{ row.nameday }}</td>
+                                            <td>{{ row.termdelay }}</td>
+                                            <td>
+                                                <label class="custom-control ios-switch">
+                                                    <input id="checkbox{{ row.id }}" type="checkbox"
+                                                           class="ios-switch-control-input">
+                                                    <span class="ios-switch-control-indicator"></span>
+                                                    <script>
+                                                        if ("{{ row.is_active }}" == "True") {
+                                                            document.getElementById("checkbox{{ row.id }}").checked = true;
+                                                        }
+                                                        document.getElementById("checkbox{{ row.id }}").addEventListener("click", function () {
+                                                            var note = document.getElementById("checkbox{{ row.id }}");
+                                                            var $alert = $('.alert');
+                                                            var formData = new FormData();
+                                                            formData.append('note_id', note.id);
+                                                            formData.append('is_active', note.checked);
+                                                            formData.append('csrfmiddlewaretoken', getCookie('csrftoken'));
+                                                            $.ajax({
+                                                                method: 'POST',
+                                                                data: formData,
+                                                                processData: false,
+                                                                contentType: false,
+
+                                                                success: function (resp) {
+                                                                    /*
+                                                                    $alert.removeClass('alert-success alert-warning');
+                                                                    $alert.show(100).addClass('alert-success').text('Статус пользователя успешно изменен!');
+                                                                    $alert.delay(1500).hide(100)
+                                                                    */
+                                                                },
+
+                                                                error: function (response) {
+                                                                    $alert.removeClass('alert-success alert-warning');
+                                                                    $alert.show().addClass('alert-warning').text('Ошибка!');
+                                                                    $alert.delay(2000).hide(100)
+                                                                },
+                                                            });
+                                                        })
+                                                    </script>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>День недели</th>
+                                            <th>Срок просрочки</th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+            <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+        <script src="{% static 'website/js/csrf.js' %}"></script>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>&copy; ООО Company</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+
+<!-- groupsDel Modal-->
+<div class="modal fade" id="groupsDelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelDel">Выберите группы для удаления:</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                {% for index_del, row_del in df_del %}
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <button type="submit" name="del_group_id" class="dropdown-item"
+                                value="{{ row_del.id }}">{{ row_del.group }}</button>
+                    </form>
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- groupFilter Modal-->
+<div class="modal fade" id="groupFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelFilter"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelFilter">Выберите фильтр:</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                {% for index_f, row_f in df_filter %}
+                    <a id="af{{ row_f.id }}" class="dropdown-item" href="#" data-dismiss="modal">{{ row_f.group }}</a>
+                    <script>
+                        document.getElementById("af{{ row_f.id }}").addEventListener("click", function () {
+
+                            var table = $('#dataTable0').dataTable();
+
+                            table
+                                .api().columns(4)
+                                .search("{{ row_f.group }}")
+                                .draw();
+                        })
+                    </script>
+                {% endfor %}
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                <button class="btn btn-success" onclick="empty_filter()" type="button" data-dismiss="modal">Очистить
+                </button>
+                <script>
+                    function empty_filter() {
+                        var table = $('#dataTable0').dataTable();
+
+                        table
+                            .api().columns(4)
+                            .search('')
+                            .draw();
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Logout Modal-->
+<div class="modal fade" id="addNote" tabindex="-1" role="dialog" aria-labelledby="labelNote"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="labelNote">Создать новую запись</h5>
+            </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <label class="small mb-1">День недели:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" id="monday" name="monday" type="checkbox">
+                                <label class="form-check-label" for="monday">Понедельник</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="tuesday" name="tuesday" type="checkbox">
+                                <label class="form-check-label" for="tuesday">Вторник</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="wednesday" name="wednesday" type="checkbox">
+                                <label class="form-check-label" for="wednesday">Среда</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="thursday" name="thursday" type="checkbox">
+                                <label class="form-check-label" for="thursday">Четверг</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="friday" name="friday" type="checkbox">
+                                <label class="form-check-label" for="friday">Пятница</label>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <label class="small mb-1">Срок просрочки:</label>
+                            <input name="input_termdelay" type="number" class="input-add-group" min="1" max="365" required>
+                        </div>
+                    </div>
+                    <div id="alert_form" class="alert" role="alert" style="white-space: pre;!important;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <button class="btn btn-success" id="submit_check" type="submit">Добавить</button>
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $('#submit_check').click(function() {
+                              if(!$("input[class='form-check-input']:checked").length) {
+                                  var $alert = $('#alert_form');
+                                  $alert.removeClass('alert-success alert-warning');
+                                  $alert.show().addClass('alert-warning').text("Вы должны выбрать хотя бы один день недели!");
+                                  $alert.delay(1500).hide(1)
+                                return false;
+                              }
+                            });
+                        });
+                    </script>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+<!-- Page level plugins -->
+<script src="{% static 'website/vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+
+<script src="{% static 'website/js/dataTables.bootstrap5.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'website/js/datatables.js' %}"></script>
+
+<script>
+    var $alert = $('#alert_id');
+    $alert.removeClass('alert-success alert-warning');
+
+    if ("{{ add_error }}" !== "") {
+        $alert.show().addClass('alert-warning').text("{{ add_error }}");
+    }
+</script>
+</body>
+</html>

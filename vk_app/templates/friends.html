@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Поиск друзей вконтакте</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.css'%}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" >
+
+            <!-- Main Content -->
+            <div id="content" >
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div id="alert_id" class="" role="alert" style="white-space: pre;!important;"></div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+                <link rel="stylesheet" type="text/css" href="{% static 'website/css/vk.css' %}">
+
+                {% block content %}
+                <div class="container-fluid">
+                    <!-- Content Row -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-mail mb-1">
+                            <div class="card shadow mb-4">
+                                <div class="card-mail-header py-3">
+                                    <h6 class="m-0 font-weight-bold card-mail-header-text">Введите id или ссылку на страницу пользователя</h6>
+                                </div>
+
+                                <div class="card-body chart-kb">
+                                    <form name="address_form" class="t-vk-form"  method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class=" mb-4">
+                                            <input  value="{{entered_target}}" name = "target_user" type="text" required>
+                                        </div>
+                                        <div class=" mb-3">
+                                            <button id="btn_target" name="btn_target"  value="some" type="submit" >Поиск</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DataTale Friends -->
+                    <div id="address_table" class="card shadow mb-4">
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-bold text-success">Поиск по пользователю {{ target_user }} <a target="_blank" href="{{ target_link }}">{{ target_link }}</a></h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable0">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>Фамилия и имя</th>
+                                            <th>Ссылка</th>
+                                            <th>Город</th>
+                                            <th>Связь</th>
+                                            <th>Мобильный номер</th>
+                                            <th>Домашний номер</th>
+                                            <th>Количество общих</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_friends %}
+                                        <tr>
+                                            <td>{{row.id}}</td>
+                                            <td>{{row.name}}</td>
+                                            <td><a target="_blank" href="{{row.link}}">{{row.link}}</a></td>
+                                            <td>{{row.city}}</td>
+                                            <td>{{row.relation}}</td>
+                                            <td>{{row.mobile_phone}}</td>
+                                            <td>{{row.home_phone}}</td>
+                                            <td>{{row.common_count}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/chart.js/Chart.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'website/js/demo/chart-pie-demo.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/datatables/jquery.dataTables.min.js'%}"></script>
+    <script src="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.js'%}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/datatables.js'%}"></script>
+
+    <script >
+        var $alert = $('#alert_id');
+        if ('{{ error }}' === 'true') {
+            $alert.text('Ничего не найдено или профиль является закрытым!')
+            $alert.removeClass('alert-success alert-warning');
+            $alert.show().addClass('alert').addClass('alert-warning');
+            $alert.delay(4000).hide(100)
+            document.getElementById("alert_id").scrollIntoView();
+        }
+    </script>
+
+
+</body>
+
+</html>

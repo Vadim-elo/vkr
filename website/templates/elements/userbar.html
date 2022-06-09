@@ -1,0 +1,49 @@
+{% load static %}
+
+<!-- Nav Item - User Information -->
+<li class="nav-item dropdown no-arrow">
+    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ user.first_name}} {{user.last_name}}</span>
+        <i class="fas fa-user"></i>
+    </a>
+    <!-- Dropdown - User Information -->
+    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+        aria-labelledby="userDropdown">
+        {% if perms.website.some %}
+        <a class="dropdown-item" href="{% url 'admin_ref'%}">
+            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+            Администрирование
+        </a>
+        <div class="dropdown-divider"></div>
+        {% endif %}
+        {% if perms.website.admin %}
+            <a class="dropdown-item" href="{% url 'management'%}">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Управление
+            </a>
+            <a class="dropdown-item" href="{% url 'confirmation'%}">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Подтверждение пользователей
+            </a>
+            <div class="dropdown-divider"></div>
+        {% endif %}
+        <a target="_blank" class="dropdown-item" href="https://docs.google.com/document/d/1PkLANnAM3u-0cQe_EjvH2YW77xTVxhscsBhxixH5IQw/edit?usp=sharing">
+            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+            Пользовательская инструкция
+        </a>
+        <a target="_blank" class="dropdown-item" href="127.0.0.1">
+            <i class="fas fa-tools fa-sm fa-fw mr-2 text-gray-400"></i>
+            Техническая поддержка
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="{% url 'password_change'%}">
+            <i class="fas fa-toolbox fa-sm fa-fw mr-2 text-gray-400"></i>
+            Изменить пароль
+        </a>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+            Выход
+        </a>
+    </div>
+</li>

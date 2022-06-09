@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2020-11-25">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="directed" timeformat="double" timerepresentation="timestamp" mode="dynamic">
+    <attributes class="node" mode="static">
+      <attribute id="modularity_class" title="Modularity Class" type="integer">
+        <default>0</default>
+      </attribute>
+    </attributes>
+    <attributes class="node" mode="dynamic">
+      <attribute id="score" title="score" type="integer"></attribute>
+    </attributes>
+    <nodes>
+      <node id="n0" label="n0">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="168.10558" y="-12.911316"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n1" label="n1">
+        <spells>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2010.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="97.20813" y="-19.506718"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n2" label="n2">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="132.50505" y="-57.327515"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n3" label="n3">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="32.522514" y="155.87865"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n4" label="n4">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-109.10701" y="159.35374"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n5" label="n5">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-3823.9712" y="-9.182858"></viz:position>
+        <viz:color r="0" g="189" b="148"></viz:color>
+      </node>
+      <node id="n6" label="n6">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-141.04901" y="198.95343"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n7" label="n7">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="33.365902" y="-232.50665"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n8" label="n8">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2010.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-245.2389" y="-177.51642"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n9" label="n9">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="32.029053" y="105.271095"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n10" label="n10">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="43.998264" y="231.00714"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n11" label="n11">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="1" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-277.56726" y="116.51962"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n12" label="n12">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="1" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="101.23755" y="-117.391914"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n13" label="n13">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2008.0"></attvalue>
+          <attvalue for="modularity_class" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="162.1917" y="-156.26694"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="n14" label="n14">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-29.507639" y="58.59784"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n15" label="n15">
+        <spells>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-384.8909" y="-116.48553"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n16" label="n16">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="102.91446" y="188.57118"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n17" label="n17">
+        <spells>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-293.71957" y="202.57928"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n18" label="n18">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-1901.284" y="-1788.6768"></viz:position>
+        <viz:color r="211" g="179" b="176"></viz:color>
+      </node>
+      <node id="n19" label="n19">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-112.73305" y="87.58661"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n20" label="n20">
+        <spells>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2012.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2012.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-25.249504" y="-66.61857"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n21" label="n21">
+        <spells>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="127.25901" y="-232.79544"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n22" label="n22">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-37.43355" y="127.72064"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n23" label="n23">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-278.41187" y="-133.77031"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n24" label="n24">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-385.3633" y="-40.49322"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n25" label="n25">
+        <spells>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-208.6987" y="239.51953"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n26" label="n26">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="80.371956" y="-192.83354"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n27" label="n27">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-220.17964" y="78.664856"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n28" label="n28">
+        <spells>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="190.6497" y="-97.15085"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n29" label="n29">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-185.05498" y="-133.84644"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n30" label="n30">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2012.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="57.985138" y="-77.6171"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n31" label="n31">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-214.24847" y="166.98965"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n32" label="n32">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-40.69414" y="251.49915"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n33" label="n33">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2012.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-25.982996" y="-112.583885"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n34" label="n34">
+        <spells>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-184.27768" y="127.532875"></viz:position>
+        <viz:color r="255" g="136" b="5"></viz:color>
+      </node>
+      <node id="n35" label="n35">
+        <spells>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="1" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="5"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="411.0543" y="-3059.9329"></viz:position>
+        <viz:color r="192" g="192" b="192"></viz:color>
+      </node>
+      <node id="n36" label="n36">
+        <spells>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-352.41028" y="-173.40709"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n37" label="n37">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-108.62721" y="-26.701752"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n38" label="n38">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="1" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-274.29083" y="-384.8982"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="n39" label="n39">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2011.0"></attvalue>
+          <attvalue for="modularity_class" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-183.97937" y="-353.97076"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="n40" label="n40">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-302.8992" y="-77.50257"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n41" label="n41">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="2" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="9.335466" y="-26.035843"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n42" label="n42">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2003.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2003.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-54.851795" y="13.0841055"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n43" label="n43">
+        <spells>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2013.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-137.06055" y="43.557854"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+      <node id="n44" label="n44">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="6"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-217.80125" y="-94.13565"></viz:position>
+        <viz:color r="76" g="70" b="62"></viz:color>
+      </node>
+      <node id="n45" label="n45">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2010.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2010.0"></attvalue>
+          <attvalue for="modularity_class" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-191.37381" y="-417.10526"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="n46" label="n46">
+        <spells>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2010.0"></spell>
+          <spell timestamp="2011.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2010.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="modularity_class" value="7"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="15.960195" y="-152.12114"></viz:position>
+        <viz:color r="115" g="192" b="0"></viz:color>
+      </node>
+      <node id="n47" label="n47">
+        <spells>
+          <spell timestamp="2002.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2008.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2011.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="3" timestamp="2002.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2008.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2011.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="8"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-266.0182" y="-331.3529"></viz:position>
+        <viz:color r="255" g="85" b="132"></viz:color>
+      </node>
+      <node id="n48" label="n48">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2012.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="0" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2012.0"></attvalue>
+          <attvalue for="modularity_class" value="4"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-38.78531" y="190.26747"></viz:position>
+        <viz:color r="223" g="137" b="255"></viz:color>
+      </node>
+      <node id="n49" label="n49">
+        <spells>
+          <spell timestamp="2000.0"></spell>
+          <spell timestamp="2001.0"></spell>
+          <spell timestamp="2004.0"></spell>
+          <spell timestamp="2005.0"></spell>
+          <spell timestamp="2006.0"></spell>
+          <spell timestamp="2007.0"></spell>
+          <spell timestamp="2009.0"></spell>
+          <spell timestamp="2012.0"></spell>
+          <spell timestamp="2013.0"></spell>
+          <spell timestamp="2014.0"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="score" value="4" timestamp="2000.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2001.0"></attvalue>
+          <attvalue for="score" value="0" timestamp="2004.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2005.0"></attvalue>
+          <attvalue for="score" value="2" timestamp="2006.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2007.0"></attvalue>
+          <attvalue for="score" value="1" timestamp="2009.0"></attvalue>
+          <attvalue for="score" value="3" timestamp="2012.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2013.0"></attvalue>
+          <attvalue for="score" value="4" timestamp="2014.0"></attvalue>
+          <attvalue for="modularity_class" value="3"></attvalue>
+        </attvalues>
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="42.67172" y="19.806946"></viz:position>
+        <viz:color r="0" g="196" b="255"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="n0" target="n1" label="0"></edge>
+      <edge id="1" source="n0" target="n2" label="1"></edge>
+      <edge id="2" source="n0" target="n4" label="2"></edge>
+      <edge id="3" source="n0" target="n26" label="3"></edge>
+      <edge id="4" source="n2" target="n28" label="4"></edge>
+      <edge id="5" source="n2" target="n42" label="5"></edge>
+      <edge id="6" source="n3" target="n16" label="6"></edge>
+      <edge id="7" source="n4" target="n22" label="7"></edge>
+      <edge id="8" source="n4" target="n32" label="8"></edge>
+      <edge id="9" source="n6" target="n25" label="9"></edge>
+      <edge id="10" source="n6" target="n32" label="10"></edge>
+      <edge id="11" source="n6" target="n34" label="11"></edge>
+      <edge id="12" source="n6" target="n44" label="12"></edge>
+      <edge id="13" source="n7" target="n13" label="13"></edge>
+      <edge id="14" source="n7" target="n21" label="14"></edge>
+      <edge id="15" source="n7" target="n26" label="15"></edge>
+      <edge id="16" source="n7" target="n33" label="16"></edge>
+      <edge id="17" source="n8" target="n23" label="17"></edge>
+      <edge id="18" source="n8" target="n39" label="18"></edge>
+      <edge id="19" source="n8" target="n44" label="19"></edge>
+      <edge id="20" source="n9" target="n16" label="20"></edge>
+      <edge id="21" source="n10" target="n16" label="21"></edge>
+      <edge id="22" source="n11" target="n17" label="22"></edge>
+      <edge id="23" source="n11" target="n27" label="23"></edge>
+      <edge id="24" source="n11" target="n33" label="24"></edge>
+      <edge id="25" source="n12" target="n26" label="25"></edge>
+      <edge id="26" source="n13" target="n37" label="26"></edge>
+      <edge id="27" source="n13" target="n38" label="27"></edge>
+      <edge id="28" source="n14" target="n37" label="28"></edge>
+      <edge id="29" source="n14" target="n42" label="29"></edge>
+      <edge id="30" source="n14" target="n43" label="30"></edge>
+      <edge id="31" source="n14" target="n49" label="31"></edge>
+      <edge id="32" source="n15" target="n23" label="32"></edge>
+      <edge id="33" source="n15" target="n24" label="33"></edge>
+      <edge id="34" source="n16" target="n17" label="34"></edge>
+      <edge id="35" source="n16" target="n32" label="35"></edge>
+      <edge id="36" source="n16" target="n49" label="36"></edge>
+      <edge id="37" source="n17" target="n31" label="37"></edge>
+      <edge id="38" source="n19" target="n20" label="38"></edge>
+      <edge id="39" source="n19" target="n22" label="39"></edge>
+      <edge id="40" source="n19" target="n49" label="40"></edge>
+      <edge id="41" source="n20" target="n30" label="41"></edge>
+      <edge id="42" source="n20" target="n36" label="42"></edge>
+      <edge id="43" source="n20" target="n37" label="43"></edge>
+      <edge id="44" source="n21" target="n26" label="44"></edge>
+      <edge id="45" source="n21" target="n30" label="45"></edge>
+      <edge id="46" source="n22" target="n25" label="46"></edge>
+      <edge id="47" source="n23" target="n36" label="47"></edge>
+      <edge id="48" source="n23" target="n44" label="48"></edge>
+      <edge id="49" source="n29" target="n44" label="49"></edge>
+      <edge id="50" source="n30" target="n33" label="50"></edge>
+      <edge id="51" source="n30" target="n46" label="51"></edge>
+      <edge id="52" source="n31" target="n34" label="52"></edge>
+      <edge id="53" source="n31" target="n42" label="53"></edge>
+      <edge id="54" source="n32" target="n48" label="54"></edge>
+      <edge id="55" source="n36" target="n40" label="55"></edge>
+      <edge id="56" source="n37" target="n42" label="56"></edge>
+      <edge id="57" source="n38" target="n45" label="57"></edge>
+      <edge id="58" source="n38" target="n47" label="58"></edge>
+      <edge id="59" source="n39" target="n47" label="59"></edge>
+      <edge id="60" source="n41" target="n42" label="60"></edge>
+      <edge id="61" source="n42" target="n44" label="61"></edge>
+      <edge id="62" source="n42" target="n49" label="62"></edge>
+      <edge id="63" source="n46" target="n49" label="63"></edge>
+    </edges>
+  </graph>
+</gexf>

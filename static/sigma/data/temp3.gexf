@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2020-12-24">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="2" title="networkx_key" type="string" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="latitude" type="double" />
+      <attribute id="1" title="longitude" type="double" />
+    </attributes>
+    <nodes>
+      <node id="n1" label="n1">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.4889619872962534" y="0.03362855537706327" z="0" />
+        <attvalues>
+          <attvalue for="0" value="50.93" />
+          <attvalue for="1" value="2.48" />
+        </attvalues>
+      </node>
+      <node id="n2" label="n2">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.6748506695296168" y="0.5113821524552449" z="0" />
+        <attvalues>
+          <attvalue for="0" value="50.88" />
+          <attvalue for="1" value="2.0" />
+        </attvalues>
+      </node>
+      <node id="n4" label="n4">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.32415683711874166" y="0.19812282569213102" z="0" />
+        <attvalues>
+          <attvalue for="0" value="49.4" />
+          <attvalue for="1" value="0.19" />
+        </attvalues>
+      </node>
+      <node id="n5" label="n5">
+        <viz:color r="200" g="0" b="0" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.2614975729702094" y="0.5436873641511286" z="0" />
+        <attvalues>
+          <attvalue for="0" value="48.49" />
+          <attvalue for="1" value="-1.92" />
+        </attvalues>
+      </node>
+      <node id="n6" label="n6">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.20815311160196978" y="1.0" z="0" />
+        <attvalues>
+          <attvalue for="0" value="48.26" />
+          <attvalue for="1" value="-4.38" />
+        </attvalues>
+      </node>
+      <node id="n7" label="n7">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.049939603843978324" y="0.19641441086423433" z="0" />
+        <attvalues>
+          <attvalue for="0" value="47.15" />
+          <attvalue for="1" value="-2.09" />
+        </attvalues>
+      </node>
+      <node id="n8" label="n8">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.2564214216432207" y="-0.302449955837878" z="0" />
+        <attvalues>
+          <attvalue for="0" value="46.02" />
+          <attvalue for="1" value="-1.04" />
+        </attvalues>
+      </node>
+      <node id="n9" label="n9">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.7860745422050675" y="-0.19768088929298408" z="0" />
+        <attvalues>
+          <attvalue for="0" value="43.22" />
+          <attvalue for="1" value="-1.85" />
+        </attvalues>
+      </node>
+      <node id="n13" label="n13">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.5545167873681747" y="-0.6239045924168798" z="0" />
+        <attvalues>
+          <attvalue for="0" value="43.62" />
+          <attvalue for="1" value="7.66" />
+        </attvalues>
+      </node>
+      <node id="n14" label="n14">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.4482660389081913" y="-0.21441685366194838" z="0" />
+        <attvalues>
+          <attvalue for="0" value="46.05" />
+          <attvalue for="1" value="6.19" />
+        </attvalues>
+      </node>
+      <node id="n15" label="n15">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.042038250571808176" y="-0.5976853471398993" z="0" />
+        <attvalues>
+          <attvalue for="0" value="47.43" />
+          <attvalue for="1" value="7.65" />
+        </attvalues>
+      </node>
+      <node id="n16" label="n16">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.3862469094178819" y="-0.5391699322550217" z="0" />
+        <attvalues>
+          <attvalue for="0" value="48.9" />
+          <attvalue for="1" value="8.32" />
+        </attvalues>
+      </node>
+      <node id="n17" label="n17">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="-0.35586690143087274" y="0.15290349413836518" z="0" />
+        <attvalues>
+          <attvalue for="0" value="49.83" />
+          <attvalue for="1" value="4.94" />
+        </attvalues>
+      </node>
+      <node id="main" label="main">
+        <viz:color r="170" g="170" b="170" a="None" />
+        <viz:size value="5" />
+        <viz:position x="0.06517995689302371" y="-0.1608312320735562" z="0" />
+        <attvalues>
+          <attvalue for="0" value="48.72" />
+          <attvalue for="1" value="2.46" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="n1" target="main" id="8">
+        <attvalues>
+          <attvalue for="2" value="8" />
+        </attvalues>
+      </edge>
+      <edge source="n1" target="n4" id="28">
+        <attvalues>
+          <attvalue for="2" value="28" />
+        </attvalues>
+      </edge>
+      <edge source="n1" target="n5" id="26">
+        <attvalues>
+          <attvalue for="2" value="26" />
+        </attvalues>
+      </edge>
+      <edge source="n2" target="n4" id="7">
+        <attvalues>
+          <attvalue for="2" value="7" />
+        </attvalues>
+      </edge>
+      <edge source="n2" target="n5" id="27">
+        <attvalues>
+          <attvalue for="2" value="27" />
+        </attvalues>
+      </edge>
+      <edge source="n4" target="n7" id="30">
+        <attvalues>
+          <attvalue for="2" value="30" />
+        </attvalues>
+      </edge>
+      <edge source="n4" target="main" id="2">
+        <attvalues>
+          <attvalue for="2" value="2" />
+        </attvalues>
+      </edge>
+      <edge source="n5" target="n6" id="0">
+        <attvalues>
+          <attvalue for="2" value="0" />
+        </attvalues>
+      </edge>
+      <edge source="n5" target="n7" id="29">
+        <attvalues>
+          <attvalue for="2" value="29" />
+        </attvalues>
+      </edge>
+      <edge source="n7" target="n8" id="1">
+        <attvalues>
+          <attvalue for="2" value="1" />
+        </attvalues>
+      </edge>
+      <edge source="n7" target="main" id="17">
+        <attvalues>
+          <attvalue for="2" value="17" />
+        </attvalues>
+      </edge>
+      <edge source="n7" target="n17" id="9">
+        <attvalues>
+          <attvalue for="2" value="9" />
+        </attvalues>
+      </edge>
+      <edge source="n8" target="n13" id="10">
+        <attvalues>
+          <attvalue for="2" value="10" />
+        </attvalues>
+      </edge>
+      <edge source="n8" target="main" id="18">
+        <attvalues>
+          <attvalue for="2" value="18" />
+        </attvalues>
+      </edge>
+      <edge source="n8" target="n9" id="15">
+        <attvalues>
+          <attvalue for="2" value="15" />
+        </attvalues>
+      </edge>
+      <edge source="n8" target="n15" id="6">
+        <attvalues>
+          <attvalue for="2" value="6" />
+        </attvalues>
+      </edge>
+      <edge source="n9" target="n14" id="14">
+        <attvalues>
+          <attvalue for="2" value="14" />
+        </attvalues>
+      </edge>
+      <edge source="n13" target="n14" id="25">
+        <attvalues>
+          <attvalue for="2" value="25" />
+        </attvalues>
+      </edge>
+      <edge source="n14" target="n17" id="5">
+        <attvalues>
+          <attvalue for="2" value="5" />
+        </attvalues>
+      </edge>
+      <edge source="n14" target="main" id="19">
+        <attvalues>
+          <attvalue for="2" value="19" />
+        </attvalues>
+      </edge>
+      <edge source="n15" target="n16" id="22">
+        <attvalues>
+          <attvalue for="2" value="22" />
+        </attvalues>
+      </edge>
+      <edge source="n15" target="n16" id="4">
+        <attvalues>
+          <attvalue for="2" value="4" />
+        </attvalues>
+      </edge>
+      <edge source="n15" target="main" id="20">
+        <attvalues>
+          <attvalue for="2" value="20" />
+        </attvalues>
+      </edge>
+      <edge source="n16" target="main" id="24">
+        <attvalues>
+          <attvalue for="2" value="24" />
+        </attvalues>
+      </edge>
+      <edge source="n17" target="n17" id="21">
+        <attvalues>
+          <attvalue for="2" value="21" />
+        </attvalues>
+      </edge>
+      <edge source="n17" target="main" id="3">
+        <attvalues>
+          <attvalue for="2" value="3" />
+        </attvalues>
+      </edge>
+      <edge source="main" target="main" id="16">
+        <attvalues>
+          <attvalue for="2" value="16" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

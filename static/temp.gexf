@@ -1,0 +1,1331 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2022-05-23">
+    <creator>NetworkX 2.8.2</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="Валентина Обрезаненко" label="Валентина Обрезаненко">
+        <viz:color r="200" g="0" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-4.718176622128387e-06" y="-6.871954110944737e-05" z="0" />
+      </node>
+      <node id="Алексей Уржумов" label="Алексей Уржумов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.4921683864874007" y="-0.11408177733115163" z="0" />
+      </node>
+      <node id="Максим Обрезаненко" label="Максим Обрезаненко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.1339701162538432" y="0.16000397667079172" z="0" />
+      </node>
+      <node id="Алмаз Гилемзянов" label="Алмаз Гилемзянов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5937624104761161" y="-0.24452766135976595" z="0" />
+      </node>
+      <node id="Dmitriy Fyoklin" label="Dmitriy Fyoklin">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.697745635553489" y="0.33930582909592333" z="0" />
+      </node>
+      <node id="Inna Gorynina" label="Inna Gorynina">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9603337798095137" y="0.26836841058167016" z="0" />
+      </node>
+      <node id="Анис Галимянов" label="Анис Галимянов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9868163398061489" y="-0.13819116403186243" z="0" />
+      </node>
+      <node id="Диляра Хакимова" label="Диляра Хакимова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.7918707141802461" y="-0.06857332327786612" z="0" />
+      </node>
+      <node id="Камиль Гайсин" label="Камиль Гайсин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8847858995721638" y="-0.16544444286376372" z="0" />
+      </node>
+      <node id="Иришка Глухова" label="Иришка Глухова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="1.0" y="-0.056694688412157294" z="0" />
+      </node>
+      <node id="Александр Злобин" label="Александр Злобин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9122878977148897" y="-0.04025421779805801" z="0" />
+      </node>
+      <node id="Ксения Сологубова" label="Ксения Сологубова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8749633814811042" y="0.07006361204443202" z="0" />
+      </node>
+      <node id="Вера Ерисова" label="Вера Ерисова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5759074228349415" y="0.04756778043606009" z="0" />
+      </node>
+      <node id="Владислав Булычев" label="Владислав Булычев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.2292224518884211" y="-0.002762974096089232" z="0" />
+      </node>
+      <node id="Дмитрий Мялковский" label="Дмитрий Мялковский">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.14514406023870066" y="0.1576169420993616" z="0" />
+      </node>
+      <node id="Анастасия Сологубова" label="Анастасия Сологубова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.30920517986673607" y="0.17382732644258908" z="0" />
+      </node>
+      <node id="Кристина Яхонтова" label="Кристина Яхонтова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.00960886289805502" y="0.2623623159541331" z="0" />
+      </node>
+      <node id="Максим Газизов" label="Максим Газизов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.17389946672886608" y="0.32704304143408336" z="0" />
+      </node>
+      <node id="Дамир Галиуллин" label="Дамир Галиуллин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.36109660178290276" y="0.33058735861587935" z="0" />
+      </node>
+      <node id="Владлен Кавеев" label="Владлен Кавеев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.4749896989245242" y="0.18890404677690223" z="0" />
+      </node>
+      <node id="Гульшат Сабитова" label="Гульшат Сабитова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.4408431155359843" y="0.46525541332616327" z="0" />
+      </node>
+      <node id="Наташа Вилисова" label="Наташа Вилисова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5383028018407834" y="0.33937879796283604" z="0" />
+      </node>
+      <node id="Никита Говохин" label="Никита Говохин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8488004053383394" y="0.3020918052530139" z="0" />
+      </node>
+      <node id="Фаиль Гафаров" label="Фаиль Гафаров">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8042254473592276" y="0.4095717668343109" z="0" />
+      </node>
+      <node id="Ильнур Урманшин" label="Ильнур Урманшин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9365301062034426" y="0.34640173411302183" z="0" />
+      </node>
+      <node id="Лана Майорова" label="Лана Майорова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8662730096669436" y="0.49507324449936624" z="0" />
+      </node>
+      <node id="Елена Ласькова" label="Елена Ласькова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9050485425822764" y="0.42131045589687743" z="0" />
+      </node>
+      <node id="Вика Воропаева" label="Вика Воропаева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.74253012485067" y="0.5058849567172338" z="0" />
+      </node>
+      <node id="Иван Кузнецов" label="Иван Кузнецов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8236760887859312" y="0.5641857612813984" z="0" />
+      </node>
+      <node id="Александра Мухина" label="Александра Мухина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.774380466181153" y="0.6273833953056654" z="0" />
+      </node>
+      <node id="Николай Суханов" label="Николай Суханов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6697505209043791" y="0.598238350560726" z="0" />
+      </node>
+      <node id="Полина Николаева" label="Полина Николаева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.7213367508159799" y="0.68859565894325" z="0" />
+      </node>
+      <node id="Наталья Болычевская" label="Наталья Болычевская">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6177318566268193" y="0.46312809660304305" z="0" />
+      </node>
+      <node id="Гюльварт Мартиросян" label="Гюльварт Мартиросян">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5902741189449793" y="0.6878344720956475" z="0" />
+      </node>
+      <node id="Ангелина Филяк" label="Ангелина Филяк">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6644537893338046" y="0.7466295915565078" z="0" />
+      </node>
+      <node id="Рустам Латыпов" label="Рустам Латыпов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.42773298782914293" y="0.6816530142480474" z="0" />
+      </node>
+      <node id="Евгений Крыгин" label="Евгений Крыгин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5987061595123435" y="0.8015211562456379" z="0" />
+      </node>
+      <node id="Иван Казаков" label="Иван Казаков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5270912571251279" y="0.5767699726293164" z="0" />
+      </node>
+      <node id="Дина Насыбуллина" label="Дина Насыбуллина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5072302502341111" y="0.7713864925460491" z="0" />
+      </node>
+      <node id="Рафаэль Имамиев" label="Рафаэль Имамиев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5213827757927147" y="0.8559101211306046" z="0" />
+      </node>
+      <node id="Дмитрий Васильев" label="Дмитрий Васильев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.3870826397848246" y="0.8097212620426095" z="0" />
+      </node>
+      <node id="Мария Кузовкина" label="Мария Кузовкина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.44675928521852526" y="0.8914487193741729" z="0" />
+      </node>
+      <node id="Лера Лященко" label="Лера Лященко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.2789839049004261" y="0.8543561901267263" z="0" />
+      </node>
+      <node id="Рустам Исмагилов" label="Рустам Исмагилов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.337022791194411" y="0.5837002630195985" z="0" />
+      </node>
+      <node id="Анастасия Ларионова" label="Анастасия Ларионова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.3730656849085793" y="0.9239594932573739" z="0" />
+      </node>
+      <node id="Ринат Дарбаев" label="Ринат Дарбаев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.2713585495628993" y="0.7218262835476122" z="0" />
+      </node>
+      <node id="Аделина Минсафина" label="Аделина Минсафина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.29755040606020094" y="0.9531077580011187" z="0" />
+      </node>
+      <node id="Ирина Коробова" label="Ирина Коробова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.24886661061261964" y="0.46134741167153975" z="0" />
+      </node>
+      <node id="Катерина Титова" label="Катерина Титова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.2197418662981699" y="0.9728337819200386" z="0" />
+      </node>
+      <node id="Алина Файзрахманова" label="Алина Файзрахманова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.13267978821964652" y="0.7543941171914207" z="0" />
+      </node>
+      <node id="Владислав Головкин" label="Владислав Головкин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.16785093944250917" y="0.5982644946265724" z="0" />
+      </node>
+      <node id="Дарья Чердинцева" label="Дарья Чердинцева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.16862283855454138" y="0.8806731440828162" z="0" />
+      </node>
+      <node id="Арина Ихсанова" label="Арина Ихсанова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.1399264833488514" y="0.9869759268612823" z="0" />
+      </node>
+      <node id="Дмитрий Галанин" label="Дмитрий Галанин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.009332133498214136" y="0.7838226173804533" z="0" />
+      </node>
+      <node id="Руслан Инджаев" label="Руслан Инджаев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.0550225855373824" y="0.8980588502640336" z="0" />
+      </node>
+      <node id="Гульназ Валиева" label="Гульназ Валиева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.059703296030095394" y="0.9966592798250081" z="0" />
+      </node>
+      <node id="Марина Быкова" label="Марина Быкова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.06558684674647602" y="0.9092431917496577" z="0" />
+      </node>
+      <node id="Альбина Семёнова" label="Альбина Семёнова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.02310778142837497" y="0.6320083795435091" z="0" />
+      </node>
+      <node id="Всеволод Чапланов" label="Всеволод Чапланов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.02181159511078569" y="0.9983887980977156" z="0" />
+      </node>
+      <node id="Ольга Мирошникова" label="Ольга Мирошникова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.10885753293502365" y="0.994464495700223" z="0" />
+      </node>
+      <node id="Гульназ Шахмина" label="Гульназ Шахмина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.12462882712091126" y="0.7017231397388526" z="0" />
+      </node>
+      <node id="Ирина Головко" label="Ирина Головко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.15832723487414732" y="0.8470118748507808" z="0" />
+      </node>
+      <node id="Дмитрий Иванов" label="Дмитрий Иванов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.1825561713974062" y="0.9726016908402482" z="0" />
+      </node>
+      <node id="Наталья Снигерева" label="Наталья Снигерева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.058759493217211585" y="0.4566870832712205" z="0" />
+      </node>
+      <node id="Сергей Морозов" label="Сергей Морозов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.2591320376497977" y="0.9666573758872289" z="0" />
+      </node>
+      <node id="Ильгам Галиуллин" label="Ильгам Галиуллин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.2717828228444199" y="0.874618771737251" z="0" />
+      </node>
+      <node id="Дмитрий Комлев" label="Дмитрий Комлев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.26573425041813803" y="0.7441404630505887" z="0" />
+      </node>
+      <node id="Павел Пашкин" label="Павел Пашкин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.3818018553368595" y="0.815386882881826" z="0" />
+      </node>
+      <node id="Олег Суменков" label="Олег Суменков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.3435962179519999" y="0.9379918116905882" z="0" />
+      </node>
+      <node id="Чингиз Мингазов" label="Чингиз Мингазов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.244747859071358" y="0.5957116840259689" z="0" />
+      </node>
+      <node id="Айдар Гирфанов" label="Айдар Гирфанов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.41831906275079117" y="0.9063127083808811" z="0" />
+      </node>
+      <node id="Евгения Созник" label="Евгения Созник">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.09568147425903467" y="0.5325541351160791" z="0" />
+      </node>
+      <node id="Гульназ Мифтахова" label="Гульназ Мифтахова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.48904262544279004" y="0.8680013191176315" z="0" />
+      </node>
+      <node id="Валерия Цепилова" label="Валерия Цепилова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.39001347285730514" y="0.6692219647714407" z="0" />
+      </node>
+      <node id="Анастасия Примова" label="Анастасия Примова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.558987839533276" y="0.8267334792903615" z="0" />
+      </node>
+      <node id="Булат Хисматуллин" label="Булат Хисматуллин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.2527406529898178" y="0.4317075784960731" z="0" />
+      </node>
+      <node id="Elena Okhitina" label="Elena Okhitina">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6262325104916442" y="0.7796561121683094" z="0" />
+      </node>
+      <node id="Марина Григорьева" label="Марина Григорьева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.4864677467011803" y="0.7561515092532957" z="0" />
+      </node>
+      <node id="Юрий Обрезаненко" label="Юрий Обрезаненко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.389058084825483" y="0.5172828904077935" z="0" />
+      </node>
+      <node id="Марат Иткулов" label="Марат Иткулов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6898917518808385" y="0.7218384518263161" z="0" />
+      </node>
+      <node id="Рустам Зианбетов" label="Рустам Зианбетов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.752071073433164" y="0.6608260410391497" z="0" />
+      </node>
+      <node id="Лилия Иткулова" label="Лилия Иткулова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5247445705032895" y="0.4300545030720766" z="0" />
+      </node>
+      <node id="Лиза Тельная" label="Лиза Тельная">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5861779432865168" y="0.6948486328345225" z="0" />
+      </node>
+      <node id="Игорь Разуткин" label="Игорь Разуткин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5180322431947902" y="0.5930389573508001" z="0" />
+      </node>
+      <node id="Антон Низов" label="Антон Низов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.4011221145723621" y="0.34031958065782647" z="0" />
+      </node>
+      <node id="Вадим Оглезнев" label="Вадим Оглезнев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6385368463828355" y="0.5028238457745492" z="0" />
+      </node>
+      <node id="Анатолий Фареник" label="Анатолий Фареник">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6763023625586658" y="0.6142869717333471" z="0" />
+      </node>
+      <node id="Алмаз Гиниятуллин" label="Алмаз Гиниятуллин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.4234145081452435" y="0.1738882776268765" z="0" />
+      </node>
+      <node id="Виллера Зианбетова" label="Виллера Зианбетова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5650713634360089" y="0.27652304529080346" z="0" />
+      </node>
+      <node id="Лейсан Гареева" label="Лейсан Гареева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6862305877975878" y="0.36578483474355056" z="0" />
+      </node>
+      <node id="Ольга Шишикина" label="Ольга Шишикина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5960460193378091" y="0.13029024628966596" z="0" />
+      </node>
+      <node id="Никита Баботин" label="Никита Баботин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7609751042910006" y="0.4991393973983477" z="0" />
+      </node>
+      <node id="Миляуша Лифадеева" label="Миляуша Лифадеева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7277159139188097" y="0.23156702765141612" z="0" />
+      </node>
+      <node id="Даниил Жидков" label="Даниил Жидков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8124399304897281" y="0.3891347506237099" z="0" />
+      </node>
+      <node id="Анастасия Ситникова" label="Анастасия Ситникова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8754479045428525" y="0.16740562083484364" z="0" />
+      </node>
+      <node id="Макс Громов" label="Макс Громов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7989452752333902" y="0.5944823182392556" z="0" />
+      </node>
+      <node id="Roman Shagiyev" label="Roman Shagiyev">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8515051631356766" y="0.28028229800176047" z="0" />
+      </node>
+      <node id="Анастасия Чухина" label="Анастасия Чухина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8500637764365133" y="0.526671714211285" z="0" />
+      </node>
+      <node id="Милана Осипова" label="Милана Осипова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8883304298860495" y="0.454627111013672" z="0" />
+      </node>
+      <node id="Александра Тутушкина" label="Александра Тутушкина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.921688678997109" y="0.3796970015913181" z="0" />
+      </node>
+      <node id="Евгений Игоревич" label="Евгений Игоревич">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9501828625517802" y="0.3048110246787369" z="0" />
+      </node>
+      <node id="Лиза Вырыпаева" label="Лиза Вырыпаева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9692118662383509" y="0.22846902404251482" z="0" />
+      </node>
+      <node id="Сергей Васильев" label="Сергей Васильев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9842142594643815" y="0.15147862529244815" z="0" />
+      </node>
+      <node id="Алина Омномном" label="Алина Омномном">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9943173877450098" y="0.07434481309122108" z="0" />
+      </node>
+      <node id="Руслан Иткулов" label="Руслан Иткулов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8932284104918721" y="0.052367343409823075" z="0" />
+      </node>
+      <node id="Наргиз Мамедова" label="Наргиз Мамедова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7535078841797627" y="0.09532185696998852" z="0" />
+      </node>
+      <node id="Александр Ежков" label="Александр Ежков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.4548220475368266" y="0.016130019049126792" z="0" />
+      </node>
+      <node id="Полина Тыщенко" label="Полина Тыщенко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.28193483673343367" y="0.062993491395931" z="0" />
+      </node>
+      <node id="Дарья Проскурникова" label="Дарья Проскурникова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.26145596492302486" y="0.25305988299243815" z="0" />
+      </node>
+      <node id="Ирина Свелогузова" label="Ирина Свелогузова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.10508984174551084" y="0.3666577543656228" z="0" />
+      </node>
+      <node id="Елизавета Рождественских" label="Елизавета Рождественских">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.19249813007089717" y="-0.08073948210427857" z="0" />
+      </node>
+      <node id="Никита Корюков" label="Никита Корюков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.09149034876790034" y="-0.4000813961340546" z="0" />
+      </node>
+      <node id="Аделина Багаутдинова" label="Аделина Багаутдинова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.21467569946437773" y="-0.2555822176047814" z="0" />
+      </node>
+      <node id="Игорь Сергеев" label="Игорь Сергеев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.35295195627849324" y="-0.12369700305640427" z="0" />
+      </node>
+      <node id="Настёнка Мирошник" label="Настёнка Мирошник">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6243861971648459" y="-0.016989118550536614" z="0" />
+      </node>
+      <node id="Лариса Пухальская" label="Лариса Пухальская">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7810812179274689" y="-0.04178599341228986" z="0" />
+      </node>
+      <node id="Надежда Сологубова" label="Надежда Сологубова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9083163921759738" y="-0.06794087648989508" z="0" />
+      </node>
+      <node id="Наталья Адилова" label="Наталья Адилова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9967858183472298" y="-0.005232591352400043" z="0" />
+      </node>
+      <node id="Егор Кузнецов" label="Егор Кузнецов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9974440529339875" y="-0.0904468578943187" z="0" />
+      </node>
+      <node id="Рауф Гайсин" label="Рауф Гайсин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9773026863995102" y="-0.16745160646040533" z="0" />
+      </node>
+      <node id="Ксения Седова" label="Ксения Седова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9659562850211996" y="-0.2403247394791985" z="0" />
+      </node>
+      <node id="Ирина Обрезаненко" label="Ирина Обрезаненко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9141435091806641" y="-0.3969275331782688" z="0" />
+      </node>
+      <node id="Артём Асфандияров" label="Артём Асфандияров">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.9478999949112252" y="-0.3219882817149776" z="0" />
+      </node>
+      <node id="Гөлшат Шамгунова" label="Гөлшат Шамгунова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8087401738098489" y="-0.3953352904191359" z="0" />
+      </node>
+      <node id="Татьяна Коваленко" label="Татьяна Коваленко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.879253411425236" y="-0.470641247683433" z="0" />
+      </node>
+      <node id="Олеся Лиханова" label="Олеся Лиханова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8651254396836973" y="-0.28327932236448106" z="0" />
+      </node>
+      <node id="Тимур Ибрагимов" label="Тимур Ибрагимов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8505740526157842" y="-0.17049492514490433" z="0" />
+      </node>
+      <node id="DELETED " label="DELETED ">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7354066314743616" y="-0.28138262309580064" z="0" />
+      </node>
+      <node id="Алина Гайнуллина" label="Алина Гайнуллина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6907844543262319" y="-0.1550794426815074" z="0" />
+      </node>
+      <node id="Егор Маурах" label="Егор Маурах">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5719755678136726" y="-0.2799682517466921" z="0" />
+      </node>
+      <node id="Виктория Резниченко" label="Виктория Резниченко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7487525728074319" y="-0.4990115869031765" z="0" />
+      </node>
+      <node id="Светлана Инджаева" label="Светлана Инджаева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5161814206041497" y="-0.14442177555781197" z="0" />
+      </node>
+      <node id="Наталья Васильева" label="Наталья Васильева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6591054772948277" y="-0.4029428521002778" z="0" />
+      </node>
+      <node id="Георгий Зуйков" label="Георгий Зуйков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.38526542637982575" y="-0.28929135039845866" z="0" />
+      </node>
+      <node id="Умар Шарифов" label="Умар Шарифов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6809442680516737" y="-0.5951973762507885" z="0" />
+      </node>
+      <node id="Владислав Гусаченко" label="Владислав Гусаченко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.4826428648505698" y="-0.406503387241086" z="0" />
+      </node>
+      <node id="Злата Воронина" label="Злата Воронина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.8395673386519868" y="-0.5396619053197622" z="0" />
+      </node>
+      <node id="Алина Сабирова" label="Алина Сабирова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.25536350367479665" y="-0.41504557432163885" z="0" />
+      </node>
+      <node id="Полина Назаркина" label="Полина Назаркина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7919826101301957" y="-0.6058320407841786" z="0" />
+      </node>
+      <node id="Александр Резниченко" label="Александр Резниченко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5798049477207848" y="-0.5178712358359054" z="0" />
+      </node>
+      <node id="Евгений Лиман" label="Евгений Лиман">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.7403698869702614" y="-0.670949639128848" z="0" />
+      </node>
+      <node id="Наталия Быкова" label="Наталия Быкова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.3767176776017272" y="-0.5110472283919759" z="0" />
+      </node>
+      <node id="Галина Журавлёва" label="Галина Журавлёва">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.5954519609189536" y="-0.6787994800945905" z="0" />
+      </node>
+      <node id="Виктория Рахимова" label="Виктория Рахимова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6826563535761164" y="-0.7281747031698568" z="0" />
+      </node>
+      <node id="Дарья Бострикова" label="Дарья Бострикова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.49461678333143877" y="-0.7505927968620856" z="0" />
+      </node>
+      <node id="Азиз Бобоев" label="Азиз Бобоев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.6190861265672822" y="-0.7810185770237146" z="0" />
+      </node>
+      <node id="Ramil Dayanov" label="Ramil Dayanov">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.4809380858148717" y="-0.614228819243416" z="0" />
+      </node>
+      <node id="Оксана Хомич" label="Оксана Хомич">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.39061283139482" y="-0.8073688514848899" z="0" />
+      </node>
+      <node id="Артем Азнабаев" label="Артем Азнабаев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.555953998897706" y="-0.8289587577170914" z="0" />
+      </node>
+      <node id="Настя Трофименко" label="Настя Трофименко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.48663943669851495" y="-0.8690482412761887" z="0" />
+      </node>
+      <node id="Денис Рожнов" label="Денис Рожнов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.41574647071096965" y="-0.9067667554076385" z="0" />
+      </node>
+      <node id="Ирина Иткулова" label="Ирина Иткулова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.35633964647048777" y="-0.6802341065711538" z="0" />
+      </node>
+      <node id="Алена Муравьева" label="Алена Муравьева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.2850212430988036" y="-0.8545142098149525" z="0" />
+      </node>
+      <node id="Дарья Торгашова" label="Дарья Торгашова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.3421390304048429" y="-0.9378715746730398" z="0" />
+      </node>
+      <node id="Damir Jan" label="Damir Jan">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.26379991613325726" y="-0.9606553265639753" z="0" />
+      </node>
+      <node id="Игорь Муравьев" label="Игорь Муравьев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.2326742001453659" y="-0.5809432957236623" z="0" />
+      </node>
+      <node id="Галина Шустикова" label="Галина Шустикова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.16791673149245193" y="-0.8693905663736985" z="0" />
+      </node>
+      <node id="Тахир Сахапов" label="Тахир Сахапов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.1888904960667908" y="-0.9770770581483241" z="0" />
+      </node>
+      <node id="Gulzat Tendikova" label="Gulzat Tendikova">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.22689878778981434" y="-0.7351215371612541" z="0" />
+      </node>
+      <node id="Елена Гребенникова" label="Елена Гребенникова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.09330362379519133" y="-0.7330491362882592" z="0" />
+      </node>
+      <node id="Юлия Баргусова" label="Юлия Баргусова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.11335581478049159" y="-0.9892841664021389" z="0" />
+      </node>
+      <node id="Егор Митягин" label="Егор Митягин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.03497856878016157" y="-0.9951600746086894" z="0" />
+      </node>
+      <node id="Гульзира Айтуреева" label="Гульзира Айтуреева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.09017804346795681" y="-0.5701231706272937" z="0" />
+      </node>
+      <node id="Дмитрий Задоя" label="Дмитрий Задоя">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.05827476553403563" y="-0.8906748173447105" z="0" />
+      </node>
+      <node id="Елена Демидова" label="Елена Демидова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.06596792539960825" y="-0.9097579541069867" z="0" />
+      </node>
+      <node id="Сергей Нетеса" label="Сергей Нетеса">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.04511376237609895" y="-0.9993926039640543" z="0" />
+      </node>
+      <node id="Дарья Васильева" label="Дарья Васильева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.03533612455321191" y="-0.7913614401558059" z="0" />
+      </node>
+      <node id="Олеся Соловьева" label="Олеся Соловьева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.13162103798407573" y="-0.9895694538297519" z="0" />
+      </node>
+      <node id="Jessi Usmanova" label="Jessi Usmanova">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.06012004769927407" y="-0.4931529142529005" z="0" />
+      </node>
+      <node id="Андрей Обрезаненко" label="Андрей Обрезаненко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.18215948376932903" y="-0.8842657770024931" z="0" />
+      </node>
+      <node id="Олеся Крамарь" label="Олеся Крамарь">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.21328528990142737" y="-0.9758166834980287" z="0" />
+      </node>
+      <node id="Ксения Степанова" label="Ксения Степанова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.05248193206342091" y="-0.6492942744685282" z="0" />
+      </node>
+      <node id="Александр Кембербетч" label="Александр Кембербетч">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.17741535719350843" y="-0.7582059918539749" z="0" />
+      </node>
+      <node id="Эльвира Шамонова" label="Эльвира Шамонова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.2908296026218962" y="-0.9538585025231866" z="0" />
+      </node>
+      <node id="Регина Камалова" label="Регина Камалова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.29827547678964167" y="-0.8504543427920597" z="0" />
+      </node>
+      <node id="Раиса Титова" label="Раиса Титова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.2098309792502148" y="-0.6133485602406422" z="0" />
+      </node>
+      <node id="Ирина Узбекова" label="Ирина Узбекова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.36782859195797424" y="-0.9261845058660735" z="0" />
+      </node>
+      <node id="Дмитрий Фиталёв" label="Дмитрий Фиталёв">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.443422565641256" y="-0.8970064273439176" z="0" />
+      </node>
+      <node id="Элина Адвансова" label="Элина Адвансова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.32180556962585455" y="-0.7224222185959571" z="0" />
+      </node>
+      <node id="Дарья Смолей" label="Дарья Смолей">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.37338183836497396" y="-0.5938175475456242" z="0" />
+      </node>
+      <node id="Галя Пешкина" label="Галя Пешкина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.4201074118533454" y="-0.8084928414596649" z="0" />
+      </node>
+      <node id="Данил Галлямов" label="Данил Галлямов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5154565672277942" y="-0.8526617069560973" z="0" />
+      </node>
+      <node id="Елена Куватова" label="Елена Куватова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5721548548422459" y="-0.807113888165806" z="0" />
+      </node>
+      <node id="Ирина Михайлова" label="Ирина Михайлова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.47862662008115375" y="-0.710901329994534" z="0" />
+      </node>
+      <node id="Оксана Демидова" label="Оксана Демидова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5141987814326938" y="-0.5651078971412044" z="0" />
+      </node>
+      <node id="Gylzira Ajtyreeva" label="Gylzira Ajtyreeva">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6384184270404906" y="-0.7690211332291225" z="0" />
+      </node>
+      <node id="Raf Gajsin" label="Raf Gajsin">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.5884614192069811" y="-0.6828036732802673" z="0" />
+      </node>
+      <node id="Юлия Наумова" label="Юлия Наумова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6979126132810709" y="-0.712371797255106" z="0" />
+      </node>
+      <node id="Сергей Зубенко" label="Сергей Зубенко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6757512676527114" y="-0.60437015063505" z="0" />
+      </node>
+      <node id="Виктория Золотова" label="Виктория Золотова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.7568189732654045" y="-0.6527775896376474" z="0" />
+      </node>
+      <node id="Юрий Глухов" label="Юрий Глухов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8046204102041011" y="-0.5885084473786095" z="0" />
+      </node>
+      <node id="Анастасия Ронжина" label="Анастасия Ронжина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8530920564131202" y="-0.51940763334834" z="0" />
+      </node>
+      <node id="Лилия Жердева" label="Лилия Жердева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8926375280992107" y="-0.4481691160007217" z="0" />
+      </node>
+      <node id="Олег Добычин" label="Олег Добычин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.7581097532835191" y="-0.49853552262687073" z="0" />
+      </node>
+      <node id="Tair Hasandjanov" label="Tair Hasandjanov">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.925017276824196" y="-0.3721698294060229" z="0" />
+      </node>
+      <node id="Андрей Фиталев" label="Андрей Фиталев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8136367869556491" y="-0.39146772408885444" z="0" />
+      </node>
+      <node id="Olga Semina" label="Olga Semina">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9533545782882225" y="-0.29563940862621435" z="0" />
+      </node>
+      <node id="Александр Зубенко" label="Александр Зубенко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8548609857900321" y="-0.28215951309511894" z="0" />
+      </node>
+      <node id="Ade Line" label="Ade Line">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6337009508622429" y="-0.48852702369392337" z="0" />
+      </node>
+      <node id="Елена Асфандиярова" label="Елена Асфандиярова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6948697840022962" y="-0.35348794223598234" z="0" />
+      </node>
+      <node id="Анна Саманкова" label="Анна Саманкова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.532634717081088" y="-0.3956014311165113" z="0" />
+      </node>
+      <node id="Славян Гомозов" label="Славян Гомозов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.4259820476170943" y="-0.27678430474177484" z="0" />
+      </node>
+      <node id="Алина Нуруллина" label="Алина Нуруллина">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.386485446719178" y="-0.4448436261099453" z="0" />
+      </node>
+      <node id="Юлия Литвинова" label="Юлия Литвинова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.25734769374737787" y="-0.3072153702516092" z="0" />
+      </node>
+      <node id="Оля Фролова" label="Оля Фролова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.22617485601740023" y="-0.4647544457257676" z="0" />
+      </node>
+      <node id="Татьяна Снигерёва" label="Татьяна Снигерёва">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.08047418542604425" y="-0.3322417137434614" z="0" />
+      </node>
+      <node id="Ольга Четверикова" label="Ольга Четверикова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.13846381679804212" y="-0.1694000732632349" z="0" />
+      </node>
+      <node id="Камила Сдержикова" label="Камила Сдержикова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.3194387159940556" y="-0.14291100594791561" z="0" />
+      </node>
+      <node id="Ильдар Пракуров" label="Ильдар Пракуров">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6513170596240777" y="-0.09060050958828936" z="0" />
+      </node>
+      <node id="Мария Попова" label="Мария Попова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.733606654097588" y="0.06175391678611257" z="0" />
+      </node>
+      <node id="Ольга Дибаева" label="Ольга Дибаева">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9957716856149146" y="0.028519717815197316" z="0" />
+      </node>
+      <node id="София Сидорова" label="София Сидорова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.987819047848667" y="0.10390706581984721" z="0" />
+      </node>
+      <node id="Игорь Узбеков" label="Игорь Узбеков">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.8949157816708483" y="0.18429607476659332" z="0" />
+      </node>
+      <node id="Виталий Шадрин" label="Виталий Шадрин">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.7705307766060006" y="0.1992511751487413" z="0" />
+      </node>
+      <node id="Галина Михайлова" label="Галина Михайлова">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9847871941970883" y="0.18505169256461196" z="0" />
+      </node>
+      <node id="Алексей Алексеев" label="Алексей Алексеев">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.9729924405637422" y="-0.2184922827482563" z="0" />
+      </node>
+      <node id="Aleksandra Itkulova" label="Aleksandra Itkulova">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.7465865855434333" y="-0.21465456893471876" z="0" />
+      </node>
+      <node id="Владимир Захарав" label="Владимир Захарав">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.6313870664626217" y="0.20094146888883208" z="0" />
+      </node>
+      <node id="Елена Резниченко" label="Елена Резниченко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.048839889219348266" y="-0.22055534073162797" z="0" />
+      </node>
+      <node id="Владимир Федоренко" label="Владимир Федоренко">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.40532331847287567" y="0.026310377249060247" z="0" />
+      </node>
+    </nodes>
+    <edges>
+      <edge source="Валентина Обрезаненко" target="Алексей Уржумов" id="0" />
+      <edge source="Валентина Обрезаненко" target="Максим Обрезаненко" id="1" />
+      <edge source="Валентина Обрезаненко" target="Алмаз Гилемзянов" id="2" />
+      <edge source="Валентина Обрезаненко" target="Dmitriy Fyoklin" id="3" />
+      <edge source="Валентина Обрезаненко" target="Inna Gorynina" id="4" />
+      <edge source="Валентина Обрезаненко" target="Анис Галимянов" id="5" />
+      <edge source="Валентина Обрезаненко" target="Диляра Хакимова" id="6" />
+      <edge source="Валентина Обрезаненко" target="Камиль Гайсин" id="7" />
+      <edge source="Валентина Обрезаненко" target="Иришка Глухова" id="8" />
+      <edge source="Валентина Обрезаненко" target="Александр Злобин" id="9" />
+      <edge source="Валентина Обрезаненко" target="Ксения Сологубова" id="10" />
+      <edge source="Валентина Обрезаненко" target="Вера Ерисова" id="11" />
+      <edge source="Валентина Обрезаненко" target="Владислав Булычев" id="12" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Мялковский" id="13" />
+      <edge source="Валентина Обрезаненко" target="Анастасия Сологубова" id="14" />
+      <edge source="Валентина Обрезаненко" target="Кристина Яхонтова" id="15" />
+      <edge source="Валентина Обрезаненко" target="Максим Газизов" id="16" />
+      <edge source="Валентина Обрезаненко" target="Дамир Галиуллин" id="17" />
+      <edge source="Валентина Обрезаненко" target="Владлен Кавеев" id="18" />
+      <edge source="Валентина Обрезаненко" target="Гульшат Сабитова" id="19" />
+      <edge source="Валентина Обрезаненко" target="Наташа Вилисова" id="20" />
+      <edge source="Валентина Обрезаненко" target="Никита Говохин" id="21" />
+      <edge source="Валентина Обрезаненко" target="Фаиль Гафаров" id="22" />
+      <edge source="Валентина Обрезаненко" target="Ильнур Урманшин" id="23" />
+      <edge source="Валентина Обрезаненко" target="Лана Майорова" id="24" />
+      <edge source="Валентина Обрезаненко" target="Елена Ласькова" id="25" />
+      <edge source="Валентина Обрезаненко" target="Вика Воропаева" id="26" />
+      <edge source="Валентина Обрезаненко" target="Иван Кузнецов" id="27" />
+      <edge source="Валентина Обрезаненко" target="Александра Мухина" id="28" />
+      <edge source="Валентина Обрезаненко" target="Николай Суханов" id="29" />
+      <edge source="Валентина Обрезаненко" target="Полина Николаева" id="30" />
+      <edge source="Валентина Обрезаненко" target="Наталья Болычевская" id="31" />
+      <edge source="Валентина Обрезаненко" target="Гюльварт Мартиросян" id="32" />
+      <edge source="Валентина Обрезаненко" target="Ангелина Филяк" id="33" />
+      <edge source="Валентина Обрезаненко" target="Рустам Латыпов" id="34" />
+      <edge source="Валентина Обрезаненко" target="Евгений Крыгин" id="35" />
+      <edge source="Валентина Обрезаненко" target="Иван Казаков" id="36" />
+      <edge source="Валентина Обрезаненко" target="Дина Насыбуллина" id="37" />
+      <edge source="Валентина Обрезаненко" target="Рафаэль Имамиев" id="38" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Васильев" id="39" />
+      <edge source="Валентина Обрезаненко" target="Мария Кузовкина" id="40" />
+      <edge source="Валентина Обрезаненко" target="Лера Лященко" id="41" />
+      <edge source="Валентина Обрезаненко" target="Рустам Исмагилов" id="42" />
+      <edge source="Валентина Обрезаненко" target="Анастасия Ларионова" id="43" />
+      <edge source="Валентина Обрезаненко" target="Ринат Дарбаев" id="44" />
+      <edge source="Валентина Обрезаненко" target="Аделина Минсафина" id="45" />
+      <edge source="Валентина Обрезаненко" target="Ирина Коробова" id="46" />
+      <edge source="Валентина Обрезаненко" target="Катерина Титова" id="47" />
+      <edge source="Валентина Обрезаненко" target="Алина Файзрахманова" id="48" />
+      <edge source="Валентина Обрезаненко" target="Владислав Головкин" id="49" />
+      <edge source="Валентина Обрезаненко" target="Дарья Чердинцева" id="50" />
+      <edge source="Валентина Обрезаненко" target="Арина Ихсанова" id="51" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Галанин" id="52" />
+      <edge source="Валентина Обрезаненко" target="Руслан Инджаев" id="53" />
+      <edge source="Валентина Обрезаненко" target="Гульназ Валиева" id="54" />
+      <edge source="Валентина Обрезаненко" target="Марина Быкова" id="55" />
+      <edge source="Валентина Обрезаненко" target="Альбина Семёнова" id="56" />
+      <edge source="Валентина Обрезаненко" target="Всеволод Чапланов" id="57" />
+      <edge source="Валентина Обрезаненко" target="Ольга Мирошникова" id="58" />
+      <edge source="Валентина Обрезаненко" target="Гульназ Шахмина" id="59" />
+      <edge source="Валентина Обрезаненко" target="Ирина Головко" id="60" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Иванов" id="61" />
+      <edge source="Валентина Обрезаненко" target="Наталья Снигерева" id="62" />
+      <edge source="Валентина Обрезаненко" target="Сергей Морозов" id="63" />
+      <edge source="Валентина Обрезаненко" target="Ильгам Галиуллин" id="64" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Комлев" id="65" />
+      <edge source="Валентина Обрезаненко" target="Павел Пашкин" id="66" />
+      <edge source="Валентина Обрезаненко" target="Олег Суменков" id="67" />
+      <edge source="Валентина Обрезаненко" target="Чингиз Мингазов" id="68" />
+      <edge source="Валентина Обрезаненко" target="Айдар Гирфанов" id="69" />
+      <edge source="Валентина Обрезаненко" target="Евгения Созник" id="70" />
+      <edge source="Валентина Обрезаненко" target="Гульназ Мифтахова" id="71" />
+      <edge source="Валентина Обрезаненко" target="Валерия Цепилова" id="72" />
+      <edge source="Валентина Обрезаненко" target="Анастасия Примова" id="73" />
+      <edge source="Валентина Обрезаненко" target="Булат Хисматуллин" id="74" />
+      <edge source="Валентина Обрезаненко" target="Elena Okhitina" id="75" />
+      <edge source="Валентина Обрезаненко" target="Марина Григорьева" id="76" />
+      <edge source="Валентина Обрезаненко" target="Юрий Обрезаненко" id="77" />
+      <edge source="Валентина Обрезаненко" target="Марат Иткулов" id="202" />
+      <edge source="Валентина Обрезаненко" target="Рустам Зианбетов" id="79" />
+      <edge source="Валентина Обрезаненко" target="Лилия Иткулова" id="80" />
+      <edge source="Валентина Обрезаненко" target="Лиза Тельная" id="81" />
+      <edge source="Валентина Обрезаненко" target="Игорь Разуткин" id="82" />
+      <edge source="Валентина Обрезаненко" target="Антон Низов" id="83" />
+      <edge source="Валентина Обрезаненко" target="Вадим Оглезнев" id="84" />
+      <edge source="Валентина Обрезаненко" target="Анатолий Фареник" id="85" />
+      <edge source="Валентина Обрезаненко" target="Алмаз Гиниятуллин" id="86" />
+      <edge source="Валентина Обрезаненко" target="Виллера Зианбетова" id="87" />
+      <edge source="Валентина Обрезаненко" target="Лейсан Гареева" id="88" />
+      <edge source="Валентина Обрезаненко" target="Ольга Шишикина" id="89" />
+      <edge source="Валентина Обрезаненко" target="Никита Баботин" id="90" />
+      <edge source="Валентина Обрезаненко" target="Миляуша Лифадеева" id="91" />
+      <edge source="Валентина Обрезаненко" target="Даниил Жидков" id="92" />
+      <edge source="Валентина Обрезаненко" target="Анастасия Ситникова" id="93" />
+      <edge source="Валентина Обрезаненко" target="Макс Громов" id="94" />
+      <edge source="Валентина Обрезаненко" target="Roman Shagiyev" id="95" />
+      <edge source="Валентина Обрезаненко" target="Анастасия Чухина" id="96" />
+      <edge source="Валентина Обрезаненко" target="Милана Осипова" id="97" />
+      <edge source="Валентина Обрезаненко" target="Александра Тутушкина" id="98" />
+      <edge source="Валентина Обрезаненко" target="Евгений Игоревич" id="99" />
+      <edge source="Валентина Обрезаненко" target="Лиза Вырыпаева" id="100" />
+      <edge source="Валентина Обрезаненко" target="Сергей Васильев" id="101" />
+      <edge source="Валентина Обрезаненко" target="Алина Омномном" id="102" />
+      <edge source="Валентина Обрезаненко" target="Руслан Иткулов" id="103" />
+      <edge source="Валентина Обрезаненко" target="Наргиз Мамедова" id="104" />
+      <edge source="Валентина Обрезаненко" target="Александр Ежков" id="105" />
+      <edge source="Валентина Обрезаненко" target="Полина Тыщенко" id="106" />
+      <edge source="Валентина Обрезаненко" target="Дарья Проскурникова" id="107" />
+      <edge source="Валентина Обрезаненко" target="Ирина Свелогузова" id="213" />
+      <edge source="Валентина Обрезаненко" target="Елизавета Рождественских" id="109" />
+      <edge source="Валентина Обрезаненко" target="Никита Корюков" id="110" />
+      <edge source="Валентина Обрезаненко" target="Аделина Багаутдинова" id="111" />
+      <edge source="Валентина Обрезаненко" target="Игорь Сергеев" id="112" />
+      <edge source="Валентина Обрезаненко" target="Настёнка Мирошник" id="113" />
+      <edge source="Валентина Обрезаненко" target="Лариса Пухальская" id="114" />
+      <edge source="Валентина Обрезаненко" target="Надежда Сологубова" id="115" />
+      <edge source="Валентина Обрезаненко" target="Наталья Адилова" id="116" />
+      <edge source="Валентина Обрезаненко" target="Егор Кузнецов" id="117" />
+      <edge source="Валентина Обрезаненко" target="Рауф Гайсин" id="118" />
+      <edge source="Валентина Обрезаненко" target="Ксения Седова" id="119" />
+      <edge source="Валентина Обрезаненко" target="Ирина Обрезаненко" id="120" />
+      <edge source="Валентина Обрезаненко" target="Артём Асфандияров" id="121" />
+      <edge source="Валентина Обрезаненко" target="Гөлшат Шамгунова" id="122" />
+      <edge source="Валентина Обрезаненко" target="Татьяна Коваленко" id="123" />
+      <edge source="Валентина Обрезаненко" target="Олеся Лиханова" id="124" />
+      <edge source="Валентина Обрезаненко" target="Тимур Ибрагимов" id="125" />
+      <edge source="Валентина Обрезаненко" target="DELETED " id="170" />
+      <edge source="Валентина Обрезаненко" target="Алина Гайнуллина" id="127" />
+      <edge source="Валентина Обрезаненко" target="Егор Маурах" id="128" />
+      <edge source="Валентина Обрезаненко" target="Виктория Резниченко" id="129" />
+      <edge source="Валентина Обрезаненко" target="Светлана Инджаева" id="130" />
+      <edge source="Валентина Обрезаненко" target="Наталья Васильева" id="131" />
+      <edge source="Валентина Обрезаненко" target="Георгий Зуйков" id="132" />
+      <edge source="Валентина Обрезаненко" target="Умар Шарифов" id="133" />
+      <edge source="Валентина Обрезаненко" target="Владислав Гусаченко" id="134" />
+      <edge source="Валентина Обрезаненко" target="Злата Воронина" id="135" />
+      <edge source="Валентина Обрезаненко" target="Алина Сабирова" id="136" />
+      <edge source="Валентина Обрезаненко" target="Полина Назаркина" id="137" />
+      <edge source="Валентина Обрезаненко" target="Александр Резниченко" id="169" />
+      <edge source="Валентина Обрезаненко" target="Евгений Лиман" id="139" />
+      <edge source="Валентина Обрезаненко" target="Наталия Быкова" id="140" />
+      <edge source="Валентина Обрезаненко" target="Галина Журавлёва" id="141" />
+      <edge source="Валентина Обрезаненко" target="Виктория Рахимова" id="142" />
+      <edge source="Валентина Обрезаненко" target="Дарья Бострикова" id="143" />
+      <edge source="Валентина Обрезаненко" target="Азиз Бобоев" id="144" />
+      <edge source="Валентина Обрезаненко" target="Ramil Dayanov" id="145" />
+      <edge source="Валентина Обрезаненко" target="Оксана Хомич" id="146" />
+      <edge source="Валентина Обрезаненко" target="Артем Азнабаев" id="147" />
+      <edge source="Валентина Обрезаненко" target="Настя Трофименко" id="148" />
+      <edge source="Валентина Обрезаненко" target="Денис Рожнов" id="149" />
+      <edge source="Валентина Обрезаненко" target="Ирина Иткулова" id="150" />
+      <edge source="Валентина Обрезаненко" target="Алена Муравьева" id="151" />
+      <edge source="Валентина Обрезаненко" target="Дарья Торгашова" id="152" />
+      <edge source="Валентина Обрезаненко" target="Damir Jan" id="153" />
+      <edge source="Валентина Обрезаненко" target="Игорь Муравьев" id="154" />
+      <edge source="Валентина Обрезаненко" target="Галина Шустикова" id="155" />
+      <edge source="Валентина Обрезаненко" target="Тахир Сахапов" id="156" />
+      <edge source="Валентина Обрезаненко" target="Gulzat Tendikova" id="157" />
+      <edge source="Валентина Обрезаненко" target="Елена Гребенникова" id="158" />
+      <edge source="Валентина Обрезаненко" target="Юлия Баргусова" id="159" />
+      <edge source="Валентина Обрезаненко" target="Егор Митягин" id="160" />
+      <edge source="Валентина Обрезаненко" target="Гульзира Айтуреева" id="161" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Задоя" id="162" />
+      <edge source="Валентина Обрезаненко" target="Елена Демидова" id="163" />
+      <edge source="Валентина Обрезаненко" target="Сергей Нетеса" id="164" />
+      <edge source="Валентина Обрезаненко" target="Дарья Васильева" id="165" />
+      <edge source="Валентина Обрезаненко" target="Олеся Соловьева" id="166" />
+      <edge source="Валентина Обрезаненко" target="Jessi Usmanova" id="167" />
+      <edge source="Валентина Обрезаненко" target="Андрей Обрезаненко" id="168" />
+      <edge source="Валентина Обрезаненко" target="Олеся Крамарь" id="171" />
+      <edge source="Валентина Обрезаненко" target="Ксения Степанова" id="172" />
+      <edge source="Валентина Обрезаненко" target="Александр Кембербетч" id="173" />
+      <edge source="Валентина Обрезаненко" target="Эльвира Шамонова" id="174" />
+      <edge source="Валентина Обрезаненко" target="Регина Камалова" id="175" />
+      <edge source="Валентина Обрезаненко" target="Раиса Титова" id="176" />
+      <edge source="Валентина Обрезаненко" target="Ирина Узбекова" id="177" />
+      <edge source="Валентина Обрезаненко" target="Дмитрий Фиталёв" id="178" />
+      <edge source="Валентина Обрезаненко" target="Элина Адвансова" id="179" />
+      <edge source="Валентина Обрезаненко" target="Дарья Смолей" id="180" />
+      <edge source="Валентина Обрезаненко" target="Галя Пешкина" id="181" />
+      <edge source="Валентина Обрезаненко" target="Данил Галлямов" id="182" />
+      <edge source="Валентина Обрезаненко" target="Елена Куватова" id="183" />
+      <edge source="Валентина Обрезаненко" target="Ирина Михайлова" id="184" />
+      <edge source="Валентина Обрезаненко" target="Оксана Демидова" id="185" />
+      <edge source="Валентина Обрезаненко" target="Gylzira Ajtyreeva" id="186" />
+      <edge source="Валентина Обрезаненко" target="Raf Gajsin" id="187" />
+      <edge source="Валентина Обрезаненко" target="Юлия Наумова" id="188" />
+      <edge source="Валентина Обрезаненко" target="Сергей Зубенко" id="220" />
+      <edge source="Валентина Обрезаненко" target="Виктория Золотова" id="190" />
+      <edge source="Валентина Обрезаненко" target="Юрий Глухов" id="191" />
+      <edge source="Валентина Обрезаненко" target="Анастасия Ронжина" id="192" />
+      <edge source="Валентина Обрезаненко" target="Лилия Жердева" id="193" />
+      <edge source="Валентина Обрезаненко" target="Олег Добычин" id="194" />
+      <edge source="Валентина Обрезаненко" target="Tair Hasandjanov" id="195" />
+      <edge source="Валентина Обрезаненко" target="Андрей Фиталев" id="196" />
+      <edge source="Валентина Обрезаненко" target="Olga Semina" id="197" />
+      <edge source="Валентина Обрезаненко" target="Александр Зубенко" id="198" />
+      <edge source="Валентина Обрезаненко" target="Ade Line" id="199" />
+      <edge source="Валентина Обрезаненко" target="Елена Асфандиярова" id="200" />
+      <edge source="Валентина Обрезаненко" target="Анна Саманкова" id="201" />
+      <edge source="Валентина Обрезаненко" target="Славян Гомозов" id="203" />
+      <edge source="Валентина Обрезаненко" target="Алина Нуруллина" id="204" />
+      <edge source="Валентина Обрезаненко" target="Юлия Литвинова" id="205" />
+      <edge source="Валентина Обрезаненко" target="Оля Фролова" id="206" />
+      <edge source="Валентина Обрезаненко" target="Татьяна Снигерёва" id="207" />
+      <edge source="Валентина Обрезаненко" target="Ольга Четверикова" id="208" />
+      <edge source="Валентина Обрезаненко" target="Камила Сдержикова" id="209" />
+      <edge source="Валентина Обрезаненко" target="Ильдар Пракуров" id="210" />
+      <edge source="Валентина Обрезаненко" target="Мария Попова" id="211" />
+      <edge source="Валентина Обрезаненко" target="Ольга Дибаева" id="212" />
+      <edge source="Валентина Обрезаненко" target="София Сидорова" id="214" />
+      <edge source="Валентина Обрезаненко" target="Игорь Узбеков" id="215" />
+      <edge source="Валентина Обрезаненко" target="Виталий Шадрин" id="216" />
+      <edge source="Валентина Обрезаненко" target="Галина Михайлова" id="217" />
+      <edge source="Валентина Обрезаненко" target="Алексей Алексеев" id="218" />
+      <edge source="Валентина Обрезаненко" target="Aleksandra Itkulova" id="219" />
+      <edge source="Валентина Обрезаненко" target="Владимир Захарав" id="221" />
+      <edge source="Валентина Обрезаненко" target="Елена Резниченко" id="222" />
+      <edge source="Валентина Обрезаненко" target="Владимир Федоренко" id="223" />
+    </edges>
+  </graph>
+</gexf>

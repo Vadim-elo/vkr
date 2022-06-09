@@ -1,0 +1,145 @@
+{% load static %}
+
+ <!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center ">
+        <div class="sidebar-brand-icon ">
+                <div class="imgcontainer">
+                    <img src="{% static 'website/img/hero.png'%}" alt="" width="80" height="60">
+                </div>
+        </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index_start' %}">
+            <i class="fas fa-fw fa-address-book"></i>
+            <span>Главная страница</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Интерфейс
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    {% if perms.website.vk %}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <span>Поиск VK</span>
+        </a>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Меню:</h6>
+                <a class="collapse-item" href="{% url 'user_photos'%}">Отметки на фото</a>
+{#                {% if perms.website.some %}#}
+{#                <a class="collapse-item" href="{% url 'vk_graphs'%}">Графы</a>#}
+{#                {% endif %}#}
+                <a class="collapse-item" href="{% url 'vk_friends'%}">Общие друзья</a>
+                <a class="collapse-item" href="{% url 'find_by_photo'%}">Поиск по фото</a>
+            </div>
+        </div>
+    </li>
+    {% endif %}
+    {% if perms.website.upload %}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <span>Бухгалтерия</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Меню:</h6>
+                <a class="collapse-item" href="{% url 'upload_payments'%}">Загрузка платежей</a>
+                <a class="collapse-item" href="{% url 'upload_moneta'%}">Сверка Монета</a>
+                <a class="collapse-item" href="{% url 'upload_portfolio'%}">Портфолио</a>
+                <a class="collapse-item" href="{% url 'receipts'%}">Чеки Атол</a>
+            </div>
+        </div>
+    </li>
+    {% endif %}
+    {% if perms.website.graphs %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'graphs' %}">
+            <span>Graphs</span></a>
+    </li>
+    {% endif %}
+    {% if perms.website.some %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'mailings' %}">
+            <span>Рассылки</span></a>
+    </li>
+    {% endif %}
+    {% if perms.website.kb %}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+            aria-expanded="true" aria-controls="collapseThree">
+            <span>Поиск по базе</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Меню:</h6>
+                <a class="collapse-item" href="{% url 'db_search'%}">Поиск по базе</a>
+            </div>
+        </div>
+    </li>
+    {% endif %}
+    {% if perms.website.some %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'api-admin' %}">
+            <span>API Service</span></a>
+    </li>
+    {% endif %}
+
+    {% if perms.website.comparing %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'face_cut' %}">
+            <span>Сравнение фото</span></a>
+    </li>
+    {% endif %}
+
+    {% if perms.website.dashboards %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'dashboards' %}">
+            <span>Dashboards</span></a>
+    </li>
+    {% endif %}
+
+    {% if perms.website.bias %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'bias' %}">
+            <span>BIAS</span></a>
+    </li>
+    {% endif %}
+
+    {% if perms.website.sms %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'sms' %}">
+            <span>Отправка СМС</span></a>
+    </li>
+    {% endif %}
+
+    {% if perms.website.call_schedule %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'sms' %}">
+            <span>График звонков</span></a>
+    </li>
+    {% endif %}
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+</ul>
+<!-- End of Sidebar -->

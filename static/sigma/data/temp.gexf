@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2021-02-01">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="21605993" label="21605993">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="0.9908665426457327" y="-0.1392530883924916" z="0" />
+      </node>
+      <node id="14983946" label="14983946">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="0.8485633567241596" y="0.5302414145440719" z="0" />
+      </node>
+      <node id="30762031" label="30762031">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="0.3092073291540002" y="0.9516424056216719" z="0" />
+      </node>
+      <node id="30622512" label="30622512">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="-0.37483411657793003" y="0.9277472308597272" z="0" />
+      </node>
+      <node id="25070609" label="25070609">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="-0.8834786895063436" y="0.4697584963678789" z="0" />
+      </node>
+      <node id="21145878" label="21145878">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="-0.9787461671158441" y="-0.20804271746224534" z="0" />
+      </node>
+      <node id="30972279" label="30972279">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="-0.6160370780241317" y="-0.7884907829203013" z="0" />
+      </node>
+      <node id="30899034" label="30899034">
+        <viz:color a="None" b="0" g="0" r="200" />
+        <viz:size value="5" />
+        <viz:position x="-4.555022440068886e-07" y="-2.593378798004599e-07" z="0" />
+      </node>
+      <node id="24185755" label="24185755">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="0.03492129509573742" y="-1.0" z="0" />
+      </node>
+      <node id="717661" label="717661">
+        <viz:color a="None" b="170" g="170" r="170" />
+        <viz:size value="5" />
+        <viz:position x="0.6695379831068633" y="-0.7436026992804321" z="0" />
+      </node>
+    </nodes>
+    <edges>
+      <edge id="15" label="ipaddress" source="21605993" target="30899034" />
+      <edge id="17" label="ipaddress" source="14983946" target="30899034" />
+      <edge id="11" label="ipaddress" source="30762031" target="30899034" />
+      <edge id="12" label="ipaddress" source="30622512" target="30899034" />
+      <edge id="13" label="ipaddress" source="25070609" target="30899034" />
+      <edge id="16" label="ipaddress" source="21145878" target="30899034" />
+      <edge id="10" label="card_number_masked" source="30972279" target="30899034" />
+      <edge id="14" label="ipaddress" source="30899034" target="24185755" />
+      <edge id="18" label="ipaddress" source="30899034" target="717661" />
+    </edges>
+  </graph>
+</gexf>

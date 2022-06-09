@@ -1,0 +1,300 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Бухгалтерия | Сверка 1С</title>
+    <link href="{% static 'website/css/loader.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+                <div class="container-fluid">
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>Сверка 1С</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        {% block content %}
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header ">
+                                    <h6 class="m-0 font-weight-bold text-success">Загрузите файлы</h6>
+                                </div>
+                                <div class="card-body chart-my">
+
+
+                                    <form name="main_form"  class="t-form-new"  method="POST" enctype="multipart/form-data"
+                                    onsubmit="document.getElementById('floatingCirclesG').hidden = false;alert('Загрузка может занять длительное время')">
+                                        {% csrf_token %}
+                                        <div class=" mb-5">
+                                            <div class="card-body">
+                                                    <label class="text-success date_label" >Введите дату окончания</label>
+                                                    <input name="date_end" type="date" class="form-control customized" required>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <label class ="text-success" >Оборотно-сальдовая ведомость по счетам 48802</label>
+                                        </div>
+                                        <a>
+                                            <input  action="" type="file" name="file_load1" id="file_load_id1" onchange="inp1()"
+                                                   required>
+                                        </a>
+                                        <p id = "pChange1">Перетащите сюда файл или нажмите на поле.</p>
+                                        <div class="card-title ">
+                                            <label class ="text-success">Оборотно-сальдовая ведомость по счетам 48801</label>
+                                        </div>
+                                         <a>
+                                            <input  action="" type="file" name="file_load2" id="file_load_id2" onchange="inp2()"
+                                                   required>
+                                        </a>
+                                        <p id = "pChange2">Перетащите сюда файл или нажмите на поле.</p>
+                                        <div class="card-title ">
+                                           <label class ="text-success">Оборотно-сальдовая ведомость по счетам 91418</label>
+                                        </div>
+                                         <a>
+                                            <input  action="" type="file" name="file_load3" id="file_load_id3" onchange="inp3()"
+                                                   required>
+                                        </a>
+                                        <p id = "pChange3">Перетащите сюда файл или нажмите на поле.</p>
+                                        <div class="card-title ">
+                                            <label class ="text-success">Оборотно-сальдовая ведомость по счетам 45511</label>
+                                        </div>
+                                         <a>
+                                            <input  action="" type="file" name="file_load4" id="file_load_id4" onchange="inp4()"
+                                                   required>
+                                        </a>
+                                        <p id = "pChange4">Перетащите сюда файл или нажмите на поле.</p>
+                                        <button type="submit" >Выполнить</button>
+                                    </form>
+
+
+                                    <script>
+                                        function inp1()
+                                        {
+                                            var x = document.getElementById("file_load_id1").value;
+                                            if (x) {
+                                                document.getElementById("pChange1").innerHTML = "Файл: " + x
+                                                }
+                                            else {
+                                                document.getElementById("pChange1").innerHTML = "Файл не выбран."
+                                            }
+                                        }
+                                        function inp2() {
+                                            var x = document.getElementById("file_load_id2").value;
+                                            if (x) {
+                                                document.getElementById("pChange2").innerHTML = "Файл: " + x
+                                            } else {
+                                                document.getElementById("pChange2").innerHTML = "Файл не выбран."
+                                            }
+                                        }
+                                        function inp3() {
+                                            var x = document.getElementById("file_load_id3").value;
+                                            if (x) {
+                                                document.getElementById("pChange3").innerHTML = "Файл: " + x
+                                            } else {
+                                                document.getElementById("pChange3").innerHTML = "Файл не выбран."
+                                            }
+                                        }
+                                        function inp4() {
+                                            var x = document.getElementById("file_load_id4").value;
+                                            if (x) {
+                                                document.getElementById("pChange4").innerHTML = "Файл: " + x
+                                            } else {
+                                                document.getElementById("pChange4").innerHTML = "Файл не выбран."
+                                            }
+                                        }
+
+                                    </script>
+                            </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-success">Результат</h6>
+                                </div>
+                                <div class="card-body chart-area">
+                                    <div id="floatingCirclesG" hidden>
+                                            <div class="f_circleG" id="frotateG_01" ></div>
+                                            <div class="f_circleG" id="frotateG_02" ></div>
+                                            <div class="f_circleG" id="frotateG_03" ></div>
+                                            <div class="f_circleG" id="frotateG_04" ></div>
+                                            <div class="f_circleG" id="frotateG_05" ></div>
+                                            <div class="f_circleG" id="frotateG_06" ></div>
+                                            <div class="f_circleG" id="frotateG_07" ></div>
+                                            <div class="f_circleG" id="frotateG_08" ></div>
+                                    </div>
+                                    <form name="load_form" class="r-form"  method="GET" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <p id="p_result"></p>
+                                        <label for="hidden_input" name="{{result}}" hidden>hidden_input</label>
+                                        <input type="text" id="hidden_input" name="hidden_input" value="{{result}}" hidden>
+                                        <button id="sub_hidden" type="submit" hidden>Скачать</button>
+                                    </form>
+                                    <script>
+                                        if ("{{result}}" != ''){
+                                            if ("{{type}}" == 'error' ) alert("{{result}}");
+                                            else {
+                                                document.getElementById("sub_hidden").hidden = false
+                                                document.getElementById("p_result").innerHTML = "Файл с результатами успешно сформирован!"
+                                        }
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        {% endblock %}
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/chart.js/Chart.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'website/js/demo/chart-pie-demo.js' %}"></script>
+
+</body>
+
+</html>

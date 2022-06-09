@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2021-01-29">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <nodes>
+      <node id="Антон Горохов" label="Антон Горохов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="-0.40039186712625713" y="-0.22880512130051045" z="0" />
+      </node>
+      <node id="Олег Горохов" label="Олег Горохов">
+        <viz:color r="0" g="255" b="0" a="0.5" />
+        <viz:size value="1" />
+        <viz:position x="0.008044227572337234" y="0.4640813751431367" z="0" />
+      </node>
+    </nodes>
+    <edges>
+      <edge source="Олег Горохов" target="Антон Горохов" id="57" />
+    </edges>
+  </graph>
+</gexf>

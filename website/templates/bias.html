@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BIAS</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/css/cash_u.css' %}" rel="stylesheet">
+
+</head>
+
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div id="alert_id" class="" role="alert" style="white-space: pre;!important;"></div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>BIAS</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                         <div class="col-sm-8 mb-1 card-bias">
+                            <div class="mb-3 ">
+                                <div class="card-body chart-bias">
+                                    <div class="row">
+                                        <div class="card-body">
+                                             <script>
+                                                    function loader_bias(){
+                                                        document.getElementById("loader-bias").hidden = false;
+                                                    }
+                                             </script>
+                                            <form class="bias" method="POST" enctype="multipart/form-data" autocomplete="off" onsubmit="loader_bias()">
+                                            {% csrf_token %}
+                                                <div class="row">
+                                                     <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">ФИО</label>
+                                                    <input value="{{ fio }}" id="fio" name="fio" class="col-sm-10 form-control" type="text" placeholder="Фамилия Имя Отчество">
+                                                </div>
+                                                <div class="row">
+                                                     <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">Дата Рождения</label>
+                                                    <input value="{{ bdate }}" id="bdate" name="bdate" class="col-sm-4 form-control" type="text" placeholder="дд.мм.гггг" >
+
+                                                    <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">Телефон</label>
+                                                    <input value="{{ input_phone }}" id="input_phone" name="input_phone" class="col-sm-4 form-control" type="text" placeholder="Номер 10 цифр" >
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">Адрес</label>
+                                                    <input value="{{ adr }}" id="adr" name="adr" class="col-sm-10 form-control" type="text" placeholder="Введите адрес" >
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">Паспорт РФ</label>
+                                                    <input value="{{ pasp }}" id="pasp" name="pasp" class="col-sm-4 form-control" type="text" placeholder="Серия Номер 10 цифр" disabled>
+
+                                                    <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">Дата выдачи</label>
+                                                    <input value="{{ biasdate }}" id="biasdate" name="biasdate" class="col-sm-4 form-control" type="text" placeholder="дд.мм.гггг" disabled>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">ИНН</label>
+                                                    <input value="{{ inn }}" id="inn" name="inn" class="col-sm-4 form-control" type="text" placeholder="Номер 12 цифр" disabled>
+
+                                                    <label class="col-sm-2 bias-lable font-weight-bold" for="fullname">СНИЛС</label>
+                                                    <input value="{{ bias_snils }}" id="bias_snils" name="bias_snils" class="col-sm-4 form-control" type="text" placeholder="Номер 11 цифр" disabled>
+                                                </div>
+
+                                                <div class="row">
+                                                    <button name="btn_bias" value="search" type="submit">Поиск</button>
+                                                </div>
+                                                <div class="row">
+                                                    <button class="left-btn" type="button" onclick="empty_bias()">Очистить</button>
+                                                </div>
+                                                <script>
+                                                    function empty_bias(){
+                                                        $("#fio").val('');
+                                                        $("#bdate").val('');
+                                                        $("#input_phone").val('');
+                                                        $("#adr").val('');
+                                                        /*
+                                                        $("#pasp").val('');
+                                                        $("#biasdate").val('');
+                                                        $("#inn").val('');
+                                                        $("#bias_snils").val('');
+                                                        */
+                                                    }
+                                                </script>
+                                                <div id="loader-bias" hidden></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    {%  if not df_bias.empty %}
+                        <!-- DataTale Match -->
+                        <div id="bias_table" class="card shadow mb-4 card-bias">
+                            <div class="" >
+                                <div class="table-responsive">
+                                    <table class="table table-bordered datatable-font" id="dataTable0">
+                                        <thead>
+                                            <tr>
+                                                <th>ФИО</th>
+                                                <th>Дата рождения</th>
+                                                <th>Место рождения</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for index, row in df_bias.iterrows %}
+                                            <tr>
+                                                <td><form target="_blank"
+                                                      method="post"
+                                                      action="{% url 'bias_profile' %} ">
+                                                {% csrf_token %}
+                                                    <input value="{{row.birthplace}}" name="_birthplace" type="text" hidden>
+                                                    <input value="{{bdate}}"  name="_birthdate_main" type="text" hidden>
+                                                    <input value="{{row.birthdate}}"  name="_birthdate_result" type="text" hidden>
+                                                    <input value="{{ input_phone }}" name="_input_phone" type="text" hidden>
+                                                    <input value="{{ adr }}" name="_adr" type="text" hidden>
+                                                    <input value="{{ fio }}" name="fio" type="text" hidden>
+                                                    <button class="bias-profile-button" value="{{row.fio}}" name="_fio" type="submit">{{row.fio}}</button>
+                                                </form>
+                                                </td>
+                                                <td>{{row.birthdate}}</td>
+                                                <td>{{row.birthplace}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    </div>
+                    <div class="row">
+                    {%  if not df_bias_possible.empty %}
+                        <!-- DataTale Match -->
+                        <div id="bias_table_possible" class="card shadow mb-4 card-bias">
+                            <div class="" >
+                                <div class="table-responsive">
+                                    <p class="font-weight-bold" style="margin-left: 10px; margin-top: 10px;" >  Возможно, Вы искали:</p>
+                                    <table class="table table-bordered datatable-font" id="dataTable1">
+                                        <thead>
+                                            <tr>
+                                                <th>ФИО</th>
+                                                <th>Дата рождения</th>
+                                                <th>Место рождения</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for index, row in df_bias_possible.iterrows %}
+                                            <tr>
+                                                <td><form target="_blank"
+                                                      method="post"
+                                                      action="{% url 'bias_profile' %} ">
+                                                {% csrf_token %}
+                                                    <input value="{{row.birthplace}}" name="_birthplace" type="text" hidden>
+                                                    <input value="{{bdate}}"  name="_birthdate_main" type="text" hidden>
+                                                    <input value="{{row.birthdate}}"  name="_birthdate_result" type="text" hidden>
+                                                    <input value="{{ input_phone }}" name="_input_phone" type="text" hidden>
+                                                    <input value="{{ adr }}" name="_adr" type="text" hidden>
+                                                    <input value="{{ fio }}" name="fio" type="text" hidden>
+                                                    <input value="possible" name="possible" type="text" hidden>
+                                                    <button class="bias-profile-button" value="{{row.fio}}" name="_fio" type="submit">{{row.fio}}</button>
+                                                </form>
+                                                </td>
+                                                <td>{{row.birthdate}}</td>
+                                                <td>{{row.birthplace}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <script src="{% static 'website/js/jquery.inputmask.js'%}"></script>
+
+    <script >
+        var $alert = $('#alert_id');
+        if ('{{ error_bias }}' !== '') {
+            $alert.text('{{ error_bias }}')
+            $alert.removeClass('alert-success alert-warning');
+            $alert.show().addClass('alert').addClass('alert-warning');
+            document.getElementById("alert_id").scrollIntoView();
+        }
+    </script>
+</body>
+
+</html>

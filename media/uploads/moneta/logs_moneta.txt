@@ -1,0 +1,107 @@
+#######################################################################################
+2022-05-23 21:52:50,580 - UpLoads_logging_moneta - ERROR - (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  role "name" does not exist
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+Traceback (most recent call last):
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "127.0.0.1", port 5432 failed: FATAL:  role "name" does not exist
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/vadim.elo/Desktop/loandail/website/scripts/check_moneta.py", line 30, in main
+    df = pd.read_sql(sqlalchemy.text(query), params={'date_beg': date_beg, 'date_end': date_end}, con=engine_pentaho)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/pandas/io/sql.py", line 592, in read_sql
+    return pandas_sql.read_query(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/pandas/io/sql.py", line 1557, in read_query
+    result = self.execute(*args)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/pandas/io/sql.py", line 1402, in execute
+    return self.connectable.execution_options().execute(*args, **kwargs)
+  File "<string>", line 2, in execute
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py", line 401, in warned
+    return fn(*args, **kwargs)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3175, in execute
+    connection = self.connect(close_with_result=True)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/Users/vadim.elo/Desktop/loandail/venv/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "127.0.0.1", port 5432 failed: FATAL:  role "name" does not exist
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

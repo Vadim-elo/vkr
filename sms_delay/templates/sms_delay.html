@@ -1,0 +1,312 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Отправка СМС</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/css/loader.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.css'%}" rel="stylesheet">
+
+    <script src="{% static 'website/js/jquery-3.5.1.js'%}"></script>
+    <script src="{% static 'website/js/jquery.dataTables.min.js'%}"></script>
+
+</head>
+
+<body id="page-top">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    {% include "elements/sidebar.html" %}
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                             aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                           placeholder="Search for..." aria-label="Search"
+                                           aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <div class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    {% include "elements/userbar.html" %}
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+            <div class="container-fluid">
+                <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>Отправка смс должникам</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                <div id="alert_id" class="alert" role="alert" style="white-space: pre;!important"></div>
+                <!-- Content Row -->
+                {% block content %}
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-mail mb-4">
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-mail-header py-3">
+                                    <h6 class="m-0 font-weight-bold card-mail-header-text">Проверить номер договора</h6>
+                                    <div class="text-white-50 small">Для отправки смс должнику предварительно проверьте
+                                        информацию по номеру договора
+                                    </div>
+                                </div>
+                                <div class="card-body chart-long-half">
+                                    <form id='main_form' class="t-mail-form" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class=" mb-4">
+                                            <input type="text"
+                                                   name="creditaccount" placeholder="Номер договора"
+                                                   value="{{ creditaccount }}" required>
+                                            <button type="submit">Проверить</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="floatingCirclesG" hidden>
+                            <div class="f_circleG" id="frotateG_01" ></div>
+                            <div class="f_circleG" id="frotateG_02" ></div>
+                            <div class="f_circleG" id="frotateG_03" ></div>
+                            <div class="f_circleG" id="frotateG_04" ></div>
+                            <div class="f_circleG" id="frotateG_05" ></div>
+                            <div class="f_circleG" id="frotateG_06" ></div>
+                            <div class="f_circleG" id="frotateG_07" ></div>
+                            <div class="f_circleG" id="frotateG_08" ></div>
+                    </div>
+                    <div id="row_send" class="row" hidden>
+                        <!-- Content Column -->
+                        <div class="col-mail mb-4">
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-mail-header py-3">
+                                    <h6 class="m-0 font-weight-bold card-mail-header-text">Новая рассылка</h6>
+                                    <div class="text-white-50 small">Для отправки смс должнику подтвердите действие
+                                        нажатием кнопки Отправить
+                                    </div>
+                                </div>
+                                <div class="card-body chart-long">
+                                    <form id="sub_form" class="t-mail-form" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <input type="text" name="creditaccount_approved" value="{{ creditaccount }}" hidden>
+                                        <input type="text" name="text_mailing" value="{{ text_sms }}" hidden>
+                                        <input type="text" name="client_phone" value="{{ client_phone }}" hidden>
+                                        <input type="text" name="peoplemain_id" value="{{ peoplemain_id }}" hidden>
+                                        <input type="text" name="collector_id" value="{{ collector_id }}" hidden>
+
+                                        <div class="mb-4">
+                                            <input type="text" placeholder="Номер договора" value="{{ creditaccount }}" disabled>
+                                        </div>
+                                        <div class="mb-4">
+                                            <input type="text" placeholder="ФИО клиента" value="{{ fio_client }}" disabled>
+                                        </div>
+                                        <textarea
+                                                cols="20" rows="3" disabled>{{ text_sms }}
+                                        </textarea>
+                                        <p id="pChange"></p>
+                                        <div class="mb-3">
+                                            <button type="submit">Отправить</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div_table" hidden>
+                        <div id="users_table" class="card shadow mb-4">
+                            <div class="card-header py-2">
+                                <h6 class="m-0 font-weight-bold text-success">Отправленные смс по номеру договора {{ creditaccount }}</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped" id="dataTableSms">
+                                        <thead>
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Кем отправлено</th>
+                                            <th>Статус</th>
+                                            <th>Тип</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for index, row in df_all_sms.iterrows %}
+                                            <tr>
+                                                <td>{{ row.massagedate }}</td>
+                                                <td>{{ row.name }}</td>
+                                                <td>{{ row.status }}</td>
+                                                <td>{{ row.type }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>&copy; ООО Company</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+<!-- Page level plugins -->
+<script src="{% static 'website/vendor/datatables/jquery.dataTables.min.js'%}"></script>
+<script src="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.js'%}"></script>
+
+
+<script src="{% static 'website/js/dataTables.bootstrap5.min.js'%}"></script>
+
+<script src="{% static 'website/js/jquery.blockUI.js'%}"></script>
+
+<script>
+    document.getElementById('sub_form').addEventListener('submit', function() {
+        $.blockUI.defaults.message = null ;
+        $.blockUI();
+        document.getElementById('floatingCirclesG').hidden = false;
+        document.getElementById('div_table').hidden = true;
+        document.getElementById('row_send').hidden = true;
+    })
+
+    document.getElementById('main_form').addEventListener('submit', function() {
+        $.blockUI.defaults.message = null ;
+        $.blockUI();
+        document.getElementById('floatingCirclesG').hidden = false;
+        document.getElementById('div_table').hidden = true;
+        document.getElementById('row_send').hidden = true;
+    })
+</script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'website/js/datatables.js'%}"></script>
+
+<script>
+    {% if not df_all_sms.empty %}
+        document.getElementById('div_table').hidden = false;
+    {% endif %}
+
+    {% if client_phone %}
+        document.getElementById('row_send').hidden = false;
+    {% endif %}
+
+    var $alert = $('.alert');
+    $alert.removeClass('alert-success alert-warning');
+
+    if ("{{ message_type }}" == "error") {
+        $alert.show().addClass('alert-warning').text('{{ message }}');
+    } else if ("{{ message_type }}" == "success") {
+        $alert.show().addClass('alert-success').text('{{ message }}');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Управление пользователями</title>
+
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="{% static 'website/css/admin_style.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.css'%}" rel="stylesheet">
+
+    <script src="{% static 'website/js/jquery-3.5.1.js'%}"></script>
+    <script src="{% static 'website/js/jquery.dataTables.min.js'%}"></script>
+</head>
+
+<body id="page-top">
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            var csrftoken = getCookie('csrftoken');
+
+            function csrfSafeMethod(method) {
+                // these HTTP methods do not require CSRF protection
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+
+            $.ajaxSetup({
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
+        });
+    </script>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" >
+
+            <!-- Main Content -->
+            <div id="content" >
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+
+                {% block content %}
+
+                <div class="container-fluid" >
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>Управление сотрудниками</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div id="alert_id" class="alert" role="alert" style="white-space: pre;!important;">{{ error }}</div>
+                    <!-- DataTale Match -->
+                    <div id="users_table" class="card shadow mb-4">
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-bold text-success">Доступные пользователи</h6>
+                        </div>
+                        <div class="card-body" >
+                         <div class="dropdown no-arrow button-form" style="float: right; top: -10px;">
+                            <a href="#" role="button" class="text-danger"
+                                aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#groupsDelModal">
+                                Удалить группу
+                                <i class="fas fa-minus fa-sm fa-fw mr-2 text-gray-400"></i>
+                            </a>
+                        </div>
+                        <div class="dropdown no-arrow button-form" style="float: right; top: -10px;">
+                            <a href="#" role="button" class="text-success"
+                                aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#addGroupModal">
+                                Добавить группу
+                                <i class="fas fa-plus fa-sm fa-fw mr-2 text-gray-400"></i>
+                            </a>
+                        </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" id="dataTable0">
+                                    <thead>
+                                        <tr>
+                                            <th>Фамилия</th>
+                                            <th>Имя</th>
+                                            <th>username</th>
+                                            <th>Отдел</th>
+                                            <th>Группы</th>
+                                            <th width="3px"></th>
+                                            <th width="10px">Активен</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for index, row in df %}
+
+                                        <tr>
+                                            <td>{{row.last_name}}</td>
+                                            <td>{{row.first_name}}</td>
+                                            <td>{{row.username}}</td>
+                                            <td>{{row.department}}</td>
+                                            <td>
+                                                {% for item in row.groups %}
+
+                                                    <a id="group_del_{{ row.id }}{{ forloop.counter  }}" class="dropdown-item-cash-u" >{{ item }}</a>
+                                                    <script>
+                                                        document.getElementById("group_del_{{ row.id }}{{ forloop.counter  }}").addEventListener("click", function (){
+                                                            var $alert = $('.alert');
+                                                            var formData = new FormData();
+                                                            formData.append('id_user_del', "{{ row.id }}");
+                                                            formData.append('group_name_del', "{{ item }}");
+                                                            formData.append('csrfmiddlewaretoken', getCookie('csrftoken'));
+
+                                                            this.remove();
+
+                                                            $.ajax({
+                                                                method: 'POST',
+                                                                data: formData,
+                                                                processData: false,
+                                                                contentType: false,
+
+                                                                success: function (resp) {
+                                                                    /*
+                                                                    $alert.removeClass('alert-success alert-warning');
+                                                                    $alert.show(100).addClass('alert-success').text('Статус пользователя успешно изменен!');
+                                                                    $alert.delay(1500).hide(100)
+                                                                    */
+                                                                },
+
+                                                                error: function (response) {
+                                                                    $alert.removeClass('alert-success alert-warning');
+                                                                    $alert.show().addClass('alert-warning').text('Ошибка!');
+                                                                    $alert.delay(2000).hide(100)
+                                                                },
+                                                            });
+                                                        });
+                                                    </script>
+                                                {% endfor %}
+                                            </td>
+                                            <td>
+                                                <div style="float: right">
+                                                    <div class="dropdown no-arrow">
+                                                        <a href="#" role="button" data-id="{{ row.id }}"
+                                                            aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#groupsAModal">
+                                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400 "></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                            <label class="custom-control ios-switch">
+                                                <input id="{{ row.id }}" type="checkbox"  class="ios-switch-control-input">
+                                                <span class="ios-switch-control-indicator"></span>
+                                                <script>
+                                                    if ("{{ row.is_active }}" == "True"){
+                                                        document.getElementById("{{ row.id }}").checked = true;
+                                                    }
+                                                    document.getElementById("{{ row.id }}").addEventListener("click", function (){
+                                                        var user = document.getElementById("{{ row.id }}");
+                                                        var $alert = $('.alert');
+                                                        var formData = new FormData();
+                                                        formData.append('id_user', user.id);
+                                                        formData.append('is_active', user.checked);
+                                                        formData.append('csrfmiddlewaretoken', getCookie('csrftoken'));
+                                                        $.ajax({
+                                                            method: 'POST',
+                                                            data: formData,
+                                                            processData: false,
+                                                            contentType: false,
+
+                                                            success: function (resp) {
+                                                                /*
+                                                                $alert.removeClass('alert-success alert-warning');
+                                                                $alert.show(100).addClass('alert-success').text('Статус пользователя успешно изменен!');
+                                                                $alert.delay(1500).hide(100)
+                                                                */
+                                                            },
+
+                                                            error: function (response) {
+                                                                $alert.removeClass('alert-success alert-warning');
+                                                                $alert.show().addClass('alert-warning').text('Ошибка!');
+                                                                $alert.delay(2000).hide(100)
+                                                            },
+                                                        });
+                                                    })
+                                                </script>
+                                            </label>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Фамилия</th>
+                                            <th></th>
+                                            <th>username</th>
+                                            <th>Отдел</th>
+                                            <th>
+                                                <div class="dropdown no-arrow">
+                                                    <button id="txtSearch" class="form-control"
+                                                           data-id="{{ row.id }}"
+                                                            aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#groupFilter">groups</button>
+                                                </div>
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endblock %}
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+            <script src="{% static 'website/js/csrf.js'%}"></script>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <!-- groupsDel Modal-->
+    <div class="modal fade" id="groupsDelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelDel">Выберите группы для удаления:</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% for index_del, row_del in df_del %}
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <button type="submit" name="del_group_id" class="dropdown-item" value="{{ row_del.id }}">{{ row_del.group }}</button>
+                            </form>
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- groupFilter Modal-->
+    <div class="modal fade" id="groupFilter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelFilter"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelFilter">Выберите фильтр:</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% for index_f, row_f in df_filter %}
+                        <a id="af{{ row_f.id }}" class="dropdown-item" href="#"  data-dismiss="modal">{{ row_f.group }}</a>
+                         <script>
+                            document.getElementById("af{{ row_f.id }}").addEventListener("click", function () {
+
+                            var table = $('#dataTable0').dataTable();
+
+                                 table
+                                     .api().columns( 4 )
+                                     .search( "{{ row_f.group }}" )
+                                     .draw();
+                            })
+                         </script>
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <button class="btn btn-success" onclick="empty_filter()" type="button" data-dismiss="modal">Очистить</button>
+                    <script>
+                        function empty_filter (){
+                            var table = $('#dataTable0').dataTable();
+
+                             table
+                                 .api().columns( 4 )
+                                 .search('')
+                                 .draw();
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- groupsA Modal-->
+    <div class="modal fade" id="groupsAModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Выберите группы:</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <script>
+                            $(document).ready(function() {
+                                $(
+                                    function()
+                                    {
+                                        $('#groupsAModal').on('show.bs.modal', function( event ) {
+                                            var a_param = $(event.relatedTarget).attr('data-id');
+                                            window.a_param = a_param;
+                                        });
+                                    }
+                                );
+
+                            });
+                    </script>
+                    {% for index_r, row_r in df_gr %}
+                        <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                            <input id="user_id{{ row_r.id }}" name="user_id" hidden>
+                            <button id="add_user_group{{ row_r.id }}" name="group_id" value="{{ row_r.id }}" class="dropdown-item" type="submit">{{ row_r.group }}</button>
+                            <script>
+                                 document.getElementById("add_user_group{{ row_r.id }}").addEventListener("click", function () {
+                                    document.getElementById("user_id{{ row_r.id }}").value=window.a_param
+                                 });
+                            </script>
+                        </form>
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="addGroupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Создать новую группу</h5>
+                </div>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <input id="group_name" name="group_name" type="text" class="input-add-group" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                        <button id="add_group" class="btn btn-success" type="submit">Добавить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/datatables/jquery.dataTables.min.js'%}"></script>
+    <script src="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.js'%}"></script>
+
+
+    <script src="{% static 'website/js/dataTables.bootstrap5.min.js'%}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/datatables.js'%}"></script>
+
+    <script>
+
+        var $alert = $('.alert');
+        $alert.removeClass('alert-success alert-warning');
+
+        if ("{{ group_error }}" == "error"){
+
+            $alert.show().addClass('alert-warning').text('Ошибка: Группа с данным именем уже существует!');
+            $alert.delay(3000).hide(100)
+        }
+
+        if ("{{ user_group_error }}" == "error"){
+
+            $alert.show().addClass('alert-warning').text('Ошибка: Пользователь уже состоит в данной группе!');
+            $alert.delay(3000).hide(100)
+        }
+
+    </script>
+</body>
+
+</html>

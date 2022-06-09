@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>API</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+                <link rel="stylesheet" type="text/css" href="{% static 'website/css/api_admin.css' %}">
+                <div class="container-fluid">
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>Service API</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        {% block content %}
+                        <!-- Content Column -->
+                        <script>
+                            if ("{{existing_user}}" == "True"){
+                                alert('Логин с данным именем уже существует! Пожалуйста, выберите другое имя!');
+                                }
+                        </script>
+                        <div class="col-lg-4 mb-4">
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-mail-header py-3">
+                                    <h6 class="m-0 font-weight-bold card-mail-header-text">Заполните поля авторизации</h6>
+                                </div>
+                                <div class="card-body chart-api">
+                                    <form name="main_form" class="t-api-admin-form"  method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="col-auto mb-4">
+                                            <input placeholder="Логин" type="text" name="api_login"
+                                               autocomplete="off" required>
+                                        </div>
+                                        <div class="col-auto mb-4">
+                                            <input placeholder="Пароль" type="text" name="api_pass"
+                                                   autocomplete="off" required>
+                                        </div>
+                                        <p></p>
+                                        <div class="mb-3">
+                                            <button type="submit" >Добавить</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for index, row in result %}
+                        <div class="col-lg-4 mb-4" >
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-2">
+                                    <h6 class="m- font-weight-bold text-success">{{row.username}}</h6>
+                                </div>
+                                <div class="card-body chart-ready-long">
+                                    <form class="t-api-admin-read-form"  method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <textarea disabled>{{row.hashed_password}}</textarea>
+                                        <div class="mb-3" >
+                                            <button name="btn_block" value="{{row.username}}"
+                                                    id="bt1_{{index}}" type="submit" >Заблокировать</button>
+                                        </div>
+                                        <div class="mb-3" >
+                                            <button class="red-btn" name="btn_unblock" value="{{row.username}}"
+                                                    id="bt2_{{index}}" type="submit" hidden>Разблокировать</button>
+                                        </div>
+                                         <script>
+                                        if ("{{row.disabled}}"=="True"){
+                                            document.getElementById("bt1_{{index}}").hidden = true
+                                            document.getElementById("bt2_{{index}}").hidden = false
+                                        }
+                                        </script>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% endblock %}
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/chart.js/Chart.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'website/js/demo/chart-pie-demo.js' %}"></script>
+
+</body>
+
+</html>

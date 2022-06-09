@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- START SIGMA IMPORTS -->
+<script src="{% static 'sigmaTest/src/sigma.core.js' %}"></script>
+<script src="{% static 'sigmaTest/src/conrad.js' %}"></script>
+<script src="{% static 'sigmaTest/src/utils/sigma.utils.js' %}"></script>
+<script src="{% static 'sigmaTest/src/utils/sigma.polyfills.js' %}"></script>
+<script src="{% static 'sigmaTest/src/sigma.settings.js' %}"></script>
+<script src="{% static 'sigmaTest/src/classes/sigma.classes.dispatcher.js' %}"></script>
+<script src="{% static 'sigmaTest/src/classes/sigma.classes.configurable.js' %}"></script>
+<script src="{% static 'sigmaTest/src/classes/sigma.classes.graph.js' %}"></script>
+<script src="{% static 'sigmaTest/src/classes/sigma.classes.camera.js' %}"></script>
+<script src="{% static 'sigmaTest/src/classes/sigma.classes.quad.js' %}"></script>
+<script src="{% static 'sigmaTest/src/classes/sigma.classes.edgequad.js' %}"></script>
+<script src="{% static 'sigmaTest/src/captors/sigma.captors.mouse.js' %}"></script>
+<script src="{% static 'sigmaTest/src/captors/sigma.captors.touch.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/sigma.renderers.canvas.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/sigma.renderers.webgl.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/sigma.renderers.svg.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/sigma.renderers.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/webgl/sigma.webgl.nodes.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/webgl/sigma.webgl.nodes.fast.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/webgl/sigma.webgl.edges.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/webgl/sigma.webgl.edges.fast.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/webgl/sigma.webgl.edges.arrow.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.labels.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.hovers.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.nodes.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edges.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edges.curve.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edges.arrow.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edgehovers.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edgehovers.curve.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/canvas/sigma.canvas.extremities.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/svg/sigma.svg.utils.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/svg/sigma.svg.nodes.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/svg/sigma.svg.edges.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/svg/sigma.svg.edges.curve.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/svg/sigma.svg.labels.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/renderers/svg/sigma.svg.hovers.def.js' %}"></script>
+<script src="{% static 'sigmaTest/src/middlewares/sigma.middlewares.rescale.js' %}"></script>
+<script src="{% static 'sigmaTest/src/middlewares/sigma.middlewares.copy.js' %}"></script>
+<script src="{% static 'sigmaTest/src/misc/sigma.misc.animation.js' %}"></script>
+<script src="{% static 'sigmaTest/src/misc/sigma.misc.bindEvents.js' %}"></script>
+<script src="{% static 'sigmaTest/src/misc/sigma.misc.bindDOMEvents.js' %}"></script>
+<script src="{% static 'sigmaTest/src/misc/sigma.misc.drawHovers.js' %}"></script>
+<!-- END SIGMA IMPORTS -->
+<script src="{% static 'sigmaTest/plugins/sigma.parsers.gexf/gexf-parser.js' %}"></script>
+<script src="{% static 'sigmaTest/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js' %}"></script>
+<script src="{% static 'sigmaTest/plugins/sigma.plugins.dragNodes/sigma.plugins.dragNodes.js' %}" ></script>
+<script src="{% static 'sigmaTest/plugins/sigma.renderers.edgeLabels/settings.js' %}"  ></script>
+<script src="{% static 'sigmaTest/plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.def.js' %}" ></script>
+<script src="{% static 'sigmaTest/plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.curve.js' %}" ></script>
+<script src="{% static 'sigmaTest/plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.curvedArrow.js' %}" ></script>
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Графы | VK</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/css/cash_u.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div id="container">
+  <style>
+    body {
+      margin: 0;
+    }
+    .container2{overflow:hidden;width:100%}
+    .box{white-space:nowrap}
+    .box div{display:inline-block;border:1px solid #000000
+    }
+    #graph-container {
+        position: relative;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background: #ffffff;
+		height: 530px;
+		width:80%;
+    }
+    #sidebar {
+      right: 0;
+      width: 20%;
+      padding: 10px;
+      height: 530px;
+      vertical-align: top;
+      overflow-x: auto;
+    }
+  </style>
+    <div class="container2">
+      <div class="box">
+              <div id="graph-container"></div>
+              <div id="sidebar"><p id="valueText">test</p></div>
+        </div>
+    </div>
+
+</div>
+<script>
+var g = {
+      nodes: [],
+      edges: []
+    };
+
+s = new sigma({
+  graph: g,
+  renderer: {
+    container: 'graph-container',
+    type: 'canvas'
+  },
+  settings: {
+    edgeLabelSize: 'proportional'
+  }
+});
+
+sigma.parsers.gexf(
+  "{% static 'temp.gexf' %}",
+  s,
+  function() {
+    s.refresh();
+  }
+);
+
+// Initialize the dragNodes plugin:
+var dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
+
+dragListener.bind('startdrag', function(event) {
+  console.log(event);
+});
+dragListener.bind('drag', function(event) {
+  console.log(event);
+});
+dragListener.bind('drop', function(event) {
+  console.log(event);
+});
+dragListener.bind('dragend', function(event) {
+  console.log(event);
+});
+
+
+s.bind('clickNode', function(e) {
+    textArea = document.getElementById('valueText');
+    node_id = e.data.node.label
+
+    $.ajax({
+                type: "POST",
+                url: '{{ '/profile/graphs/node_info' }}',
+                data: { csrfmiddlewaretoken: '{{ csrf_token }}', node_id: node_id },
+                success: function callback(response){
+                           textArea.innerHTML = response;
+                        }
+            });
+});
+
+</script>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/chart.js/Chart.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'website/js/demo/chart-pie-demo.js' %}"></script>
+
+</body>
+
+</html>

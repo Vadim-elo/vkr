@@ -1,0 +1,5 @@
+venv/
+media/*.xlsx
+media/*.txt
+media/*.jpg
+.idea/

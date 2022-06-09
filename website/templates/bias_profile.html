@@ -1,0 +1,636 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BIAS profile</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'website/css/cash_u.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="{% static 'website/css/jquery.dataTables.min.css'%}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <script src="{% static 'website/js/bias.js'%}"></script>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div id="alert_id" class="" role="alert" style="white-space: pre;!important;"></div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- Content Row -->
+
+                    {% if df_person %}
+                    <!-- DataTale Person -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Общая информация</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Полное имя</th>
+                                            <th>Дата рождения</th>
+                                            <th>Место рождения</th>
+                                            <th>Дата смерти</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_person %}
+                                        <tr>
+                                            <td>{{row.fullname}}</td>
+                                            <td>{{row.birthdate}}</td>
+                                            <td>{{row.birthplace}}</td>
+                                            <td>{{row.deathdate}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_organization %}
+                    <!-- DataTale Organization -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Список сведений о ЮЛ</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Краткое наименование</th>
+                                            <th>Полное наименование</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>ИНН</th>
+                                            <th>ОГРН</th>
+                                            <th>Год регистрации</th>
+                                            <th>Год присвоения ОГРН</th>
+                                            <th>Год ликвидации</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_organization %}
+                                        <tr>
+                                            <td>{{row.shortname}}</td>
+                                            <td>{{row.fullname}}</td>
+                                            <td>{{row.regionname}}</td>
+                                            <td>{{row.regplace}}</td>
+                                            <td>{{row.inn}}</td>
+                                            <td>{{row.ogrn}}</td>
+                                            <td>{{row.regyear}}</td>
+                                            <td>{{row.regdate}}</td>
+                                            <td>{{row.enddate}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_entrepreneur %}
+                    <!-- DataTale Entrepreneur -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Список сведений об ИП</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Фамилия ИП</th>
+                                            <th>Имя ИП</th>
+                                            <th>Отчество ИП</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>ИНН</th>
+                                            <th>ОГРН</th>
+                                            <th>Год регистрации</th>
+                                            <th>Год присвоения ОГРН</th>
+                                            <th>Год ликвидации</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_entrepreneur %}
+                                        <tr>
+                                            <td>{{row.lastname}}</td>
+                                            <td>{{row.firstname}}</td>
+                                            <td>{{row.middlename}}</td>
+                                            <td>{{row.regionname}}</td>
+                                            <td>{{row.regplace}}</td>
+                                            <td>{{row.inn}}</td>
+                                            <td>{{row.ogrn}}</td>
+                                            <td>{{row.regyear}}</td>
+                                            <td>{{row.regdate}}</td>
+                                            <td>{{row.enddate}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_phone %}
+                    <!-- DataTale Phone -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Контакты - Телефон</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Значение</th>
+                                            <th>Регион</th>
+                                            <th>Тип телефона</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_phone %}
+                                        <tr>
+                                            <td>{{row.number}}
+                                                <a id="aPerson{{ index }}" href="#" role="button" class="text-danger" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#modalPerson{{ index }}"></a>
+                                            </td>
+                                            <script>
+                                                window.addEventListener('DOMContentLoaded', function(){
+                                                    getAddition('{{row.number}}','Person{{ index }}','{{ del_fio }}','{% url 'bias_profile' %}','');
+                                                });
+                                            </script>
+                                            <td>{{row.regionname}}</td>
+                                            <td>{{row.islandlind}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_address %}
+                    <!-- DataTale Address -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Контакты - Адрес</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Значение</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_address %}
+                                        <tr>
+                                            <td>{{row.value}}
+                                            <a id="aAddress{{ index }}" href="#" role="button" class="text-danger" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#modalAddress{{ index }}"></a>
+                                            </td>
+                                            <script>
+                                                window.addEventListener('DOMContentLoaded', function(){
+                                                    getAddition('','Address{{ index }}','{{ del_fio }}','{% url 'bias_profile' %}','{{row.value}}');
+                                                });
+                                            </script>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_document %}
+                    <!-- DataTale Document -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Документы</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table  class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип</th>
+                                            <th>Серия/Номер</th>
+                                            <th>Дата выдачи</th>
+                                            <th>Кем выдан</th>
+                                            <th>Код подразделения</th>
+                                            <th>Статус</th>
+                                            <th>Причина, если недействителен</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_document %}
+                                        <tr>
+                                            <td>{{row.typedisplayname}}</td>
+                                            <td>{{row.sernum}}</td>
+                                            <td>{{row.issuedate}}</td>
+                                            <td>{{row.issuer}}</td>
+                                            <td>{{row.departmentcode}}</td>
+                                            <td>{{row.isexpired}}</td>
+                                            <td>{{row.expirationreason}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_negative %}
+                    <!-- DataTale Negative -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Негативные события</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип</th>
+                                            <th>Тег</th>
+                                            <th>Дата события</th>
+                                            <th>Статья</th>
+                                            <th>Описание</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_negative %}
+                                        <tr>
+                                            <td>{{row.typedisplayname}}</td>
+                                            <td>{{row.tags}}</td>
+                                            <td>{{row.atdate}}</td>
+                                            <td>{{row.article}}</td>
+                                            <td>{{row.multilinetext|linebreaksbr}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_linked_person %}
+                    <!-- DataTale Linked_person -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Связи</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип связи</th>
+                                            <th>Полное имя</th>
+                                            <th>Дата рождения</th>
+                                            <th>Место рождения</th>
+                                            <th>Дата смерти</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_linked_person %}
+                                        <tr>
+                                            <td>{{row.linktypedisplayname}}</td>
+                                            <td>{{row.fullname}}</td>
+                                            <td>{{row.birthdate}}</td>
+                                            <td>{{row.birthplace}}</td>
+                                            <td>{{row.deathdate}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                 {% if df_linked_organization %}
+                    <!-- DataTale Linked_organization -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Организации, связанные с персоной</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип связи</th>
+                                            <th>Краткое наименование</th>
+                                            <th>Полное наименование</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>ИНН</th>
+                                            <th>ОГРН</th>
+                                            <th>Год регистрации</th>
+                                            <th>Год присвоения ОГРН</th>
+                                            <th>Год ликвидации</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_linked_organization %}
+                                        <tr>
+                                            <td>{{row.linktypedisplayname}}</td>
+                                            <td>{{row.shortname}}</td>
+                                            <td>{{row.fullname}}</td>
+                                            <td>{{row.regionname}}</td>
+                                            <td>{{row.regplace}}</td>
+                                            <td>{{row.inn}}</td>
+                                            <td>{{row.ogrn}}</td>
+                                            <td>{{row.regyear}}</td>
+                                            <td>{{row.regdate}}</td>
+                                            <td>{{row.enddate}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_linked_entrepreneur %}
+                    <!-- DataTale Linked_entrepreneur -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">ИП, связанные с персоной</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип связи</th>
+                                            <th>Фамилия</th>
+                                            <th>Имя</th>
+                                            <th>Отчество</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>ИНН</th>
+                                            <th>ОГРН</th>
+                                            <th>Год регистрации</th>
+                                            <th>Год присвоения ОГРН</th>
+                                            <th>Год ликвидации</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_linked_entrepreneur %}
+                                        <tr>
+                                            <td>{{row.linktypedisplayname}}</td>
+                                            <td>{{row.lastname}}</td>
+                                            <td>{{row.firstname}}</td>
+                                            <td>{{row.middlename}}</td>
+                                            <td>{{row.regionname}}</td>
+                                            <td>{{row.regplace}}</td>
+                                            <td>{{row.inn}}</td>
+                                            <td>{{row.ogrn}}</td>
+                                            <td>{{row.regyear}}</td>
+                                            <td>{{row.regdate}}</td>
+                                            <td>{{row.enddate}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                {% if df_linked_vehicle %}
+                    <!-- DataTale Linked_vehicle -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">ТС, связанные с персоной</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип связи</th>
+                                            <th>VIN</th>
+                                            <th>Гос. номер</th>
+                                            <th>Год выпуска ТС</th>
+                                            <th>Марка ТС</th>
+                                            <th>Модель ТС</th>
+                                            <th>Цвет</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_linked_vehicle %}
+                                        <tr>
+                                            <td>{{row.linktypedisplayname}}</td>
+                                            <td>{{row.vin}}</td>
+                                            <td>{{row.regplate}}</td>
+                                            <td>{{row.manufactureyear}}</td>
+                                            <td>{{row.brand}}</td>
+                                            <td>{{row.model}}</td>
+                                            <td>{{row.color}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                    {% if df_linked_estate %}
+                    <!-- DataTale Linked_estate -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Объекты недвижимости, связанные с персоной</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Тип связи</th>
+                                            <th>Кадастровый №</th>
+                                            <th>Объект</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_linked_estate %}
+                                        <tr>
+                                            <td>{{row.linktypedisplayname}}</td>
+                                            <td>{{row.cadnum}}</td>
+                                            <td>{{row.description}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+
+                {% if df_addition %}
+                    <!-- DataTale Addition -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-1">
+                            <h6 class="m-0 text-success">Дополнительная информация</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="compact stripe" style="font-size: 14px;">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:150px !important;">Дата</th>
+                                            <th>Значение</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_addition %}
+                                        <tr>
+                                            <td>{{row.atdate}}</td>
+                                            <td>{{row.multilinetext|linebreaksbr}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {%  endif %}
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modals"></div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/datatables/jquery.dataTables.min.js'%}"></script>
+
+    <script >
+        var $alert = $('#alert_id');
+        if ('{{ error_bias }}' !== '') {
+            $alert.text('{{ error_bias }}')
+            $alert.removeClass('alert-success alert-warning');
+            $alert.show().addClass('alert').addClass('alert-warning');
+            document.getElementById("alert_id").scrollIntoView();
+        }
+
+        if ('{{ checker_post }}'==='yes'){
+            document.getElementById("bias_table").hidden = false;
+        }
+    </script>
+
+
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/datatables.js'%}"></script>
+
+</body>
+</html>

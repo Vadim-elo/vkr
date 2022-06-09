@@ -1,0 +1,105 @@
+.chart-api{
+  position: relative;
+  height: 220px;
+  width: 100%;
+  margin-top: -60px;
+}
+
+
+.t-api-admin-form{
+  position: relative;
+  margin-top: 50px;
+  height: 80px;
+  width: 100%;
+}
+.t-api-admin-form input{
+  width: 100%;
+  outline: none;
+  color:#6c757d;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.t-api-admin-form button{
+  position: absolute;
+  right: 0;
+  color: #fff;
+  background: #1cc88a;
+  border: none;
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  border-bottom: 2px solid #468847;
+  transition: all .2s ease;
+  outline: none;
+}
+.t-api-admin-form button:hover{
+  background: #468847;
+  color: #fff;
+}
+.t-api-admin-form button:active{
+  border:0;
+}
+
+
+.t-api-admin-read-form{
+  position: relative;
+  margin-top: 50px;
+  height: 80px;
+  width: 100%;
+}
+.t-api-admin-read-form textarea{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+  border-radius: 0.25rem;
+  resize: none;
+  background-color: whitesmoke;
+}
+
+.t-api-admin-read-form button{
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  margin-top: 90px;
+  color: #fff;
+  background: #a5e5ce;
+  border: none;
+  width: 150px;
+  height: 25px;
+  border-radius: 4px;
+  transition: all .2s ease;
+  outline: none;
+}
+
+.t-api-admin-read-form button.red-btn{
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  margin-top: 90px;
+  color: #fff;
+  background: #ed7468;
+  border: none;
+  width: 150px;
+  height: 25px;
+  border-radius: 4px;
+  transition: all .2s ease;
+  outline: none;
+}
+
+.t-api-admin-read-form button.red-btn:hover{
+  background: #e74a3b;
+  color: #fff;
+}
+.t-api-admin-read-form button.red-btn:active{
+  border:0;
+}
+
+.t-api-admin-read-form button:hover{
+  background: #468847;
+  color: #fff;
+}
+.t-api-admin-read-form button:active{
+  border:0;
+}

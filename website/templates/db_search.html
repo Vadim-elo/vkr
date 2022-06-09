@@ -1,0 +1,742 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'hero.png' %}"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Поиск по базе</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'website/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'website/css/google_nunito.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'website/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.css'%}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        {% include "elements/sidebar.html" %}
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" >
+
+            <!-- Main Content -->
+            <div id="content" >
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div id="alert_id" class="alert" role="alert" style="white-space: pre;!important;">{{ dashboard_error }}</div>
+                    <div id="alert_id_db" class="alert" role="alert" style="white-space: pre;!important;"></div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        {% include "elements/userbar.html" %}
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <link rel="stylesheet" type="text/css" href="{% static 'website/css/cash_u.css' %}">
+
+                {% block content %}
+                <div class="container-fluid" >
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="px-4">
+                            <div class="row align-items-center justify-content-between pt-3">
+                                <div class="mb-3">
+                                    <h1>Поиск по базе</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Content Row -->
+                    <div class="row">
+                        <!-- Content Column -->
+                        <div class="col-mail-search mb-1">
+                            <div class="card shadow mb-3">
+                                <div class="card-mail-header py-3">
+                                    <h6 class="m-0 font-weight-bold card-mail-header-text">Поиск по базам</h6>
+                                </div>
+                                <div class="card-body chart-db">
+                                    <form name="main_form" class="t-kb-form"  method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                            <div class=" mb-4">
+                                                <div class="row">
+                                                    <div class="card-body ">
+                                                        <input value="{{ entered_surname }}" id="surname" name = "surname" placeholder="Фамилия" type="text">
+                                                        <input value="{{ entered_name }}" id="name" name = "name" placeholder="Имя" type="text">
+                                                        <input value="{{ entered_midname }}" id="midname" name = "midname" placeholder="Отчество" type="text">
+                                                        <input type="button" value="X" class="inp-reset" onclick="clearFio()">
+                                                        <script>
+                                                            function clearFio(){
+                                                                document.getElementById('surname').value='';
+                                                                document.getElementById('name').value='';
+                                                                document.getElementById('midname').value='';
+                                                            }
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="card-body ">
+                                                        <input value="{{ entered_date }}" id="bdate" name="bdate" type="text" placeholder="Дата рождения" title="Двойной клик для выбора полей год, месяц или день">
+                                                        <input type="button" value="X" class="inp-reset" onclick="document.getElementById('bdate').value=''">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="card-body ">
+                                                        <input value="{{ entered_phone }}" id="input_phone" name = "phone" type="text" placeholder="Телефон не более 10 цифр">
+                                                        <input type="button" value="X" class="inp-reset" onclick="document.getElementById('input_phone').value=''">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="card-body ">
+                                                        <input value="{{ entered_address }}" class="address" id="address" name = "address" type="text" placeholder="Адрес">
+                                                        <input type="button" value="X" class="inp-reset" onclick="document.getElementById('address').value=''">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=" mb-3">
+                                                <button id="btn_phone" name="btn_phone"  value="some" type="submit" >Поиск</button>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DataTale Match -->
+                    <div id="surname_table" class="card shadow mb-4" hidden>
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-normal text-success">Совпадение с {{ entered_surname }} {{ entered_name }} {{ entered_midname }}</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="table table-bordered datatable-font"  id="dataTable0">
+                                    <thead>
+                                        <tr>
+                                            <th>Тег</th>
+                                            <th>Ресурс</th>
+                                            <th>Ссылка</th>
+                                            <th>ФИО</th>
+                                            <th>Дата рождения</th>
+                                            <th>Телефон</th>
+                                            <th>Город</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>Место рождения</th>
+                                            <th>Работа</th>
+                                            <th>Комментарий</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df1 %}
+                                        <tr>
+                                            <td>{{row.tag}}</td>
+                                            <td>{{row.source_region}}</td>
+                                            <td>
+                                                {% if row.link %}
+                                                <a class="t-kb-form-fio" target="_blank" href="{{row.link}}">
+                                                    <button class="datatable-fio-button"  type="submit">Facebook</button>
+                                                </a>
+                                                {% endif %}
+                                            </td>
+                                            <td><div>{{row.surname}}</div>
+                                                <div>{{row.name}}</div>
+                                                <div>{{row.middlename}}</div>
+                                                </td>
+                                            <td>{{row.birthdate}}</td>
+                                            <td style="white-space: nowrap"><form target="_blank"
+                                                      name="create_station"
+                                                      method="post"
+                                                      action="{% url 'db_search' %} ">
+                                                {% csrf_token %}
+                                                <button class="datatable-button"
+                                                  name="phone"
+                                                  type="submit"
+                                                  value={{row.phone}}><span class="badge zone-blue badge-counter">{{row.total}}</span>
+                                                </button>
+                                                <button
+                                                    class="datatable-button"
+                                                    id="butto_top_region{{index}}"
+                                                    name="phone_str"
+                                                    type="button"
+                                                    value={{row.phone}}>
+                                                    {{row.phone}}
+                                                </button>
+                                                <div class="dropdown-divider"></div>
+                                                <div id="div_region{{index}}"></div>
+                                                <script>
+                                                    document.getElementById("butto_top_region{{index}}").addEventListener("click", function (){
+                                                        function getCookie(name) {
+                                                        var cookieValue = null;
+                                                        if (document.cookie && document.cookie != '') {
+                                                                var cookies = document.cookie.split(';');
+                                                                for (var i = 0; i < cookies.length; i++) {
+                                                                    var cookie = jQuery.trim(cookies[i]);
+                                                                    // Does this cookie string begin with the name we want?
+                                                                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                                        break;
+                                                                    }
+                                                                }
+                                                            }
+                                                            return cookieValue;
+                                                        }
+
+                                                        var csrftoken = getCookie('csrftoken');
+
+                                                        function csrfSafeMethod(method) {
+                                                            // these HTTP methods do not require CSRF protection
+                                                            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                                                        }
+
+                                                        $.ajaxSetup({
+                                                            beforeSend: function (xhr, settings) {
+                                                                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                                                                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                                                                }
+                                                            }
+                                                        });
+                                                        var $alert = $('#alert_id_db');
+                                                        $alert.removeClass('alert-success alert-warning');
+                                                        var formData = new FormData();
+                                                        formData.append('req_phone', this.value);
+                                                        formData.append('csrfmiddlewaretoken', getCookie('csrftoken'));
+                                                        $.ajax({
+                                                            method: 'POST',
+                                                            data: formData,
+                                                            processData: false,
+                                                            contentType: false,
+
+                                                            success: function (response) {
+                                                                var div_region = document.getElementById("div_region{{index}}");
+                                                                var lable_region = document.createElement("lable");
+                                                                lable_region.textContent = response;
+
+                                                                div_region.appendChild(lable_region)
+                                                            },
+
+                                                            error: function (response) {
+                                                                $alert.removeClass('alert-success alert-warning');
+                                                                $alert.show().addClass('alert-warning').text('Ошибка!');
+                                                                $alert.delay(2000).hide(100)
+                                                                document.getElementById("alert_id_db").scrollIntoView();
+                                                            },
+                                                        });
+                                                    })
+                                                </script>
+                                                </form></td>
+                                            <td>{{row.city}}</td>
+                                            <td>{{row.region}}</td>
+                                            <td><div>{{row.adr}}</div>
+                                                <div>{{row.adr2}}</div>
+                                            </td>
+                                            <td>{{row.rog}}</td>
+                                            <td>{{row.rab}}</td>
+                                            <td>{{row.comment}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DataTale name -->
+                    <div id="fio_table" class="card shadow mb-4" hidden>
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-normal text-success">Совпадение фамилии. Совпадение имени или отчества, при возможной орфографической ошибке.</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered datatable-font" id="dataTable1">
+                                    <thead>
+                                        <tr>
+                                            <th>Тег</th>
+                                            <th>Ресурс</th>
+                                            <th>Ссылка</th>
+                                            <th>ФИО</th>
+                                            <th>Дата рождения</th>
+                                            <th>Телефон</th>
+                                            <th>Город</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>Место рождения</th>
+                                            <th>Работа</th>
+                                            <th>Комментарий</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df0 %}
+                                        <tr>
+                                            <td>{{row.tag}}</td>
+                                            <td>{{row.source_region}}</td>
+                                            <td>
+                                                {% if row.link %}
+                                                <a class="t-kb-form-fio" target="_blank" href="{{row.link}}">
+                                                    <button class="datatable-fio-button"  type="submit">Facebook</button>
+                                                </a>
+                                                {% endif %}
+                                            </td>
+                                            <td><div>{{row.surname}}</div>
+                                                <div>{{row.name}}</div>
+                                                <div>{{row.middlename}}</div>
+                                                </td>
+                                            <td>{{row.birthdate}}</td>
+                                            <td style="white-space: nowrap"><form target="_blank"
+                                                      name="create_station"
+                                                      method="post"
+                                                      action="{% url 'db_search' %} ">
+                                                {% csrf_token %}
+                                                <button
+                                                    class="datatable-button"
+                                                    name="phone"
+                                                    type="submit"
+                                                    value={{row.phone}}><span
+                                                        class="badge zone-blue badge-counter">{{row.total}}</span>
+                                                </button>
+                                                <button
+                                                    class="datatable-button"
+                                                    id="button_region{{index}}"
+                                                    name="phone_str"
+                                                    type="button"
+                                                    value={{row.phone}}>
+                                                    {{row.phone}}
+                                                </button>
+                                                <div class="dropdown-divider"></div>
+                                                <div id="div_region{{index}}"></div>
+                                                <script>
+                                                    document.getElementById("button_region{{index}}").addEventListener("click", function (){
+                                                        function getCookie(name) {
+                                                        var cookieValue = null;
+                                                        if (document.cookie && document.cookie != '') {
+                                                                var cookies = document.cookie.split(';');
+                                                                for (var i = 0; i < cookies.length; i++) {
+                                                                    var cookie = jQuery.trim(cookies[i]);
+                                                                    // Does this cookie string begin with the name we want?
+                                                                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                                        break;
+                                                                    }
+                                                                }
+                                                            }
+                                                            return cookieValue;
+                                                        }
+
+                                                        var csrftoken = getCookie('csrftoken');
+
+                                                        function csrfSafeMethod(method) {
+                                                            // these HTTP methods do not require CSRF protection
+                                                            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                                                        }
+
+                                                        $.ajaxSetup({
+                                                            beforeSend: function (xhr, settings) {
+                                                                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                                                                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                                                                }
+                                                            }
+                                                        });
+                                                        var $alert = $('#alert_id_db');
+                                                        $alert.removeClass('alert-success alert-warning');
+                                                        var formData = new FormData();
+                                                        formData.append('req_phone', this.value);
+                                                        formData.append('csrfmiddlewaretoken', getCookie('csrftoken'));
+                                                        $.ajax({
+                                                            method: 'POST',
+                                                            data: formData,
+                                                            processData: false,
+                                                            contentType: false,
+
+                                                            success: function (response) {
+                                                                var div_region = document.getElementById("div_region{{index}}");
+                                                                var lable_region = document.createElement("lable");
+                                                                lable_region.textContent = response;
+
+                                                                div_region.appendChild(lable_region)
+                                                            },
+
+                                                            error: function (response) {
+                                                                $alert.removeClass('alert-success alert-warning');
+                                                                $alert.show().addClass('alert-warning').text('Ошибка!');
+                                                                $alert.delay(2000).hide(100)
+                                                                document.getElementById("alert_id_db").scrollIntoView();
+                                                            },
+                                                        });
+                                                    })
+                                                </script>
+                                                </form></td>
+                                            <td>{{row.city}}</td>
+                                            <td>{{row.region}}</td>
+                                            <td><div>{{row.adr}}</div>
+                                                <div>{{row.adr2}}</div>
+                                            </td>
+                                            <td>{{row.rog}}</td>
+                                            <td>{{row.rab}}</td>
+                                            <td>{{row.comment}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                    if ({{fio_checker}})
+                    {
+                        document.getElementById('surname_table').hidden = false
+                        document.getElementById('fio_table').hidden = false
+                    }
+                    </script>
+
+                    <!-- DataTale Phone -->
+                    <div id="phone_table" class="card shadow mb-4" hidden>
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-bold text-success">Совпадение c {{ entered_phone }}</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="table table-bordered datatable-font" id="dataTable2">
+                                    <thead>
+                                        <tr>
+                                            <th>Тег</th>
+                                            <th>Ресурс</th>
+                                            <th>Ссылка</th>
+                                            <th>ФИО</th>
+                                            <th>Фамилия</th>
+                                            <th>Имя</th>
+                                            <th>Отчество</th>
+                                            <th>Найти ФИО</th>
+                                            <th>Дата рождения</th>
+                                            <th>Телефон</th>
+                                            <th>Адрес</th>
+                                            <th>Город</th>
+                                            <th>Комментарий</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_phone %}
+                                        <tr>
+                                            <td>{{row.tag}}</td>
+                                            <td>{{row.source_region}}</td>
+                                            <td>
+                                                {% if row.link %}
+                                                <a class="t-kb-form-fio" target="_blank" href="{{row.link}}">
+                                                    <button class="datatable-fio-button" type="submit">Facebook</button>
+                                                </a>
+                                                {% endif %}
+                                            </td>
+                                            <td>{{row.fio}}</td>
+                                            <td>{{row.surname}}</td>
+                                            <td>{{row.name}}</td>
+                                            <td>{{row.middlename}}</td>
+                                            <td><form target="_blank"
+                                                      method="post"
+                                                      action="{% url 'db_search' %} ">{% csrf_token %}
+                                                <div><input name = "surname"
+                                                            type="text"
+                                                            value="{{row.surname}}"
+                                                            hidden><input name = "name"
+                                                                          type="text"
+                                                                          value="{{row.name}}"
+                                                                          hidden><input name = "midname"
+                                                                                        type="text"
+                                                                                        value="{{row.middlename}}"
+                                                                                        hidden><button class="datatable-fio-button" type="submit">поиск</button></div>
+                                                </form>
+                                            </td>
+                                            <td>{{row.birthdate}}</td>
+                                            <td style="white-space: nowrap">
+                                                <button
+                                                    class="datatable-button"
+                                                    id="button_btn_region{{index}}"
+                                                    name="phone_str"
+                                                    type="button"
+                                                    value={{row.phone}}>
+                                                    {{row.phone}}
+                                                </button>
+                                                <div class="dropdown-divider"></div>
+                                                <div id="div_region{{index}}"></div>
+                                                <script>
+                                                    document.getElementById("button_btn_region{{index}}").addEventListener("click", function (){
+                                                        function getCookie(name) {
+                                                        var cookieValue = null;
+                                                        if (document.cookie && document.cookie != '') {
+                                                                var cookies = document.cookie.split(';');
+                                                                for (var i = 0; i < cookies.length; i++) {
+                                                                    var cookie = jQuery.trim(cookies[i]);
+                                                                    // Does this cookie string begin with the name we want?
+                                                                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                                                                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                                                        break;
+                                                                    }
+                                                                }
+                                                            }
+                                                            return cookieValue;
+                                                        }
+
+                                                        var csrftoken = getCookie('csrftoken');
+
+                                                        function csrfSafeMethod(method) {
+                                                            // these HTTP methods do not require CSRF protection
+                                                            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+                                                        }
+
+                                                        $.ajaxSetup({
+                                                            beforeSend: function (xhr, settings) {
+                                                                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                                                                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                                                                }
+                                                            }
+                                                        });
+                                                        var $alert = $('#alert_id_db');
+                                                        $alert.removeClass('alert-success alert-warning');
+                                                        var formData = new FormData();
+                                                        formData.append('req_phone', this.value);
+                                                        formData.append('csrfmiddlewaretoken', getCookie('csrftoken'));
+                                                        $.ajax({
+                                                            method: 'POST',
+                                                            data: formData,
+                                                            processData: false,
+                                                            contentType: false,
+
+                                                            success: function (response) {
+                                                                var div_region = document.getElementById("div_region{{index}}");
+                                                                var lable_region = document.createElement("lable");
+                                                                lable_region.textContent = response;
+
+                                                                div_region.appendChild(lable_region)
+                                                            },
+
+                                                            error: function (response) {
+                                                                $alert.removeClass('alert-success alert-warning');
+                                                                $alert.show().addClass('alert-warning').text('Ошибка!');
+                                                                $alert.delay(2000).hide(100)
+                                                                document.getElementById("alert_id_db").scrollIntoView();
+                                                            },
+                                                        });
+                                                    })
+                                                </script>
+                                                </td>
+                                            <td><div>{{row.adr}}</div>
+                                                <div>{{row.adr2}}</div>
+                                            </td>
+                                            <td>{{row.city}}</td>
+                                            <td>{{row.comment}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                    if ({{phone_checker}})
+                    {
+                        document.getElementById('phone_table').hidden = false
+                    }
+                    </script>
+
+                    <!-- DataTale Address -->
+                    <div id="address_table" class="card shadow mb-4" hidden>
+                        <div class="card-header py-2">
+                            <h6 class="m-0 font-weight-bold text-success">Совпадение c {{ entered_address }}</h6>
+                        </div>
+                        <div class="card-body" >
+                            <div class="table-responsive">
+                                <table class="table table-bordered datatable-font" id="dataTable3">
+                                    <thead>
+                                        <tr>
+                                            <th>Тег</th>
+                                            <th>Ресурс</th>
+                                            <th>ФИО
+                                            <th>Найти по ФИО</th>
+                                            <th>Дата рождения</th>
+                                            <th>Город</th>
+                                            <th>Регион</th>
+                                            <th>Адрес</th>
+                                            <th>Место рождения</th>
+                                            <th>Работа</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for index, row in df_address %}
+                                        <tr>
+                                            <td>{{row.tag}}</td>
+                                            <td>{{row.source_region}}</td>
+                                            <td><div>{{row.surname}}</div>
+                                                <div>{{row.name}}</div>
+                                                <div>{{row.middlename}}</div>
+                                            </td>
+                                            <td><form target="_blank"
+                                                      method="post"
+                                                      action="{% url 'db_search' %} ">{% csrf_token %}
+                                                <div><input name = "surname"
+                                                            type="text"
+                                                            value="{{row.surname}}"
+                                                            hidden><input name = "name"
+                                                                          type="text"
+                                                                          value="{{row.name}}"
+                                                                          hidden><input name = "midname"
+                                                                                        type="text"
+                                                                                        value="{{row.middlename}}"
+                                                                                        hidden><button class="datatable-fio-button" type="submit">поиск</button></div>
+                                                </form>
+                                            </td>
+                                            <td>{{row.birthdate}}</td>
+                                            <td>{{row.city}}</td>
+                                            <td>{{row.region}}</td>
+                                            <td><div>{{row.adr}}</div>
+                                                <div>{{row.adr2}}</div>
+                                            </td>
+                                            <td>{{row.rog}}</td>
+                                            <td>{{row.rab}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                    if ({{address_checker}})
+                    {
+                        document.getElementById('address_table').hidden = false
+                    }
+                    </script>
+
+                {% endblock %}
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>&copy; ООО Company</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Готовы завершить работу?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Выберите "Выйти", чтобы завершить сессию.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Отмена</button>
+                    <a class="btn btn-success" href="{% url 'logout' %}">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'website/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'website/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'website/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/chart.js/Chart.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'website/js/demo/chart-pie-demo.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'website/vendor/datatables/jquery.dataTables.min.js'%}"></script>
+    <script src="{% static 'website/vendor/datatables/dataTables.bootstrap4.min.js'%}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'website/js/datatables.js'%}"></script>
+
+    <script src="{% static 'website/js/jquery.inputmask.js'%}"></script>
+
+    <script >
+        var $alert = $('#alert_id');
+
+        if ($alert.text()) {
+            $alert.removeClass('alert-success alert-warning');
+            $alert.show().addClass('alert-warning');
+            $alert.delay(4000).hide(100)
+            document.getElementById("alert_id").scrollIntoView();
+        }
+
+        if ('{{ error_kb }}' !== '') {
+            $alert.text('{{ error_kb }}')
+            $alert.removeClass('alert-success alert-warning');
+            $alert.show().addClass('alert').addClass('alert-warning');
+            document.getElementById("alert_id").scrollIntoView();
+        }
+    </script>
+</body>
+</html>
